@@ -34,10 +34,9 @@ class LoginScreen extends StatelessWidget {
               Container(
                 width: 105,
                 height: 105,
-                child: const Image(
-                  image: NetworkImage('https://i.ibb.co/NrNcTKf/TUlogin3.png'),
-
-                ),
+                child: Image.asset(
+                  'images/TUlogin1.png'
+                                ),
               ),
               const SizedBox(
                 height: 20,

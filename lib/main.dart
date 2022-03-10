@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:tutumapp/welcome_Scr.dart';
+import 'Doctors_list.dart';
+import 'Home.dart';
 import 'LogAs_Scr.dart';
 import 'Login_Scr.dart';
+import 'reg_patient.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -13,9 +17,9 @@ class MyApp extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-            home: LogAS(),
+            home: PatHome(),
             //WelcomeScreen(),
-      //LoginScreen(),
+      //
 
     );
   }
