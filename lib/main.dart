@@ -4,6 +4,7 @@ import 'Doctors_list.dart';
 import 'Home.dart';
 import 'LogAs_Scr.dart';
 import 'Login_Scr.dart';
+import 'basma/p1.dart';
 import 'reg_patient.dart';
 
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-            home: PatHome(),
+            home: SignUP_patient(),
             //WelcomeScreen(),
       //
 
