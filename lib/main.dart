@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-            home: SignUP_patient(),
+            home: PatHome(),
             //WelcomeScreen(),
       //
 
