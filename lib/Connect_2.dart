@@ -1,51 +1,68 @@
 import 'package:flutter/material.dart';
 import 'Login_Scr.dart';
 
-class WelcomeScreen extends StatelessWidget {
+class connectScreen_2 extends StatelessWidget {
   var primaryColor = Color(0xFFE42A4C);
   var primaryColor2 = Color(0xFFEDEDED);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        elevation: 0.0,
+        backgroundColor: primaryColor.withOpacity(0.0),
+        title: Text('Connect your watch',
+            style: TextStyle(
+              color: Colors.black87,
+            ),),
+        leading: const IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.black87,
+          ),
+          onPressed: printMess,
+        ),
+      ),
       body: Column(
         children: [
-          SizedBox(
-            height: 30,
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(30.0),
+              child: Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30.0),
+                  border: Border.all(color: Colors.pink, width: 2, ),
+                  color: Colors.white,
+
+                ),
+                  child: Text('ggg'),
+                    ),
+            ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(3.0),
-            child: Container(
-              child: Image.asset(
-                'images/medicineSet.png',
-                //width: 22,
-               // height: 22,
-              ),
-                  ),
-          ),
+          SizedBox(height: 20),
           Column(
-            children: const [
+            children:  [
+
               Text(
-                " Be in control of ",
+                "Connect ",
                 style: TextStyle(
-                    fontSize: 29,
+                    fontSize: 26,
                     fontWeight: FontWeight.w400,
-                    color: Colors.black,
+                    color: Colors.black87,
                     fontFamily: 'Montserrat'),
               ),
               Text(
-                " Your Health",
+                "Tutum Watch",
                 style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.black,
+                    fontSize: 26,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.pink,
                     fontFamily: 'Montserrat'),
               ),
               SizedBox(height: 30),
               Text(
-                "An easy to use and reliable app\n"
-                "That helps you remember to take\n"
-                "Your meds of right time and\n"
-                'Monitor your body health.',
+                "and press next",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: 17,
@@ -70,7 +87,7 @@ class WelcomeScreen extends StatelessWidget {
                  Navigator.push(context,MaterialPageRoute(builder: (context)=> LoginScreen()));
                 },
                 child: const Text(
-                  'Get Started',
+                  'Next',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,

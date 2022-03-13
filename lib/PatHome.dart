@@ -112,6 +112,7 @@ class _PatHomeState extends State<PatHome> {
               
             ),
             Expanded(
+              flex: 1,
               // mid box
               child: Container(
                 decoration: BoxDecoration(
@@ -441,7 +442,7 @@ class _PatHomeState extends State<PatHome> {
               ),
             ), //pills containers ###
             Expanded( // reports
-
+              flex: 1,
               child: Container(
                 decoration: BoxDecoration(
                   color: primaryColor2,
@@ -479,7 +480,6 @@ class _PatHomeState extends State<PatHome> {
                                               color: Colors.red[900],
                                             ),
                                           ),
-
                                         ],
                                       ),
                                       SizedBox(height: 30,),
@@ -605,10 +605,6 @@ class _PatHomeState extends State<PatHome> {
                 ),
               ),
             ),
-
-
-
-
           ],
         ));
   }

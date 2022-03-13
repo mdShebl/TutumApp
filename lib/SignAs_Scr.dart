@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class LogAS extends StatelessWidget {
+class SignAS extends StatelessWidget {
   var primaryColor = Color.fromARGB(255, 228, 42, 76);
   var primaryColor2 = Color(0xFFFFDBDB);
   var primaryColor3 = Color(0xFFEDE8E8);
@@ -79,13 +79,13 @@ class LogAS extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Login as",
+                    Text("Ceate account as",
                     style: TextStyle(
                       fontSize: 25,
                     ),
                     ),
                     SizedBox(height: 10,),
-                    Text("Choose one to complete the login"),
+                    Text("Choose one to complete the sign up"),
                   ],
                 ),
               ),
@@ -173,7 +173,7 @@ class LogAS extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      'New User ?',
+                      'Already Have an account?',
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
                       ),
@@ -183,7 +183,7 @@ class LogAS extends StatelessWidget {
                           print("connect to sign up page ...");
                         },
                         child: Text(
-                          'Create account',
+                          'sign in',
                           style: TextStyle(
                             color: primaryColor,
                             fontSize: 16,
