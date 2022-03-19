@@ -71,7 +71,7 @@ class _PatHomeState extends State<PatHome> {
               padding: const EdgeInsets.symmetric(horizontal: 13),
               child: IconButton(
                 onPressed: () {},
-                icon: Image.asset('images/plus.png',),
+                icon: Image.asset('images/pluss.png',),
               ),
             )
           ],
