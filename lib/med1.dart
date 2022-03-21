@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:scroll_snap_list/scroll_snap_list.dart';
+import 'package:tutumapp/SvgIcons.dart';
 
-class med extends StatelessWidget {
+class med extends StatefulWidget {
   const med({Key? key}) : super(key: key);
 
+  @override
+  State<med> createState() => _medState();
+}
+
+class _medState extends State<med> {
   @override
   Widget build(BuildContext context) {
     var primaryColor = Color.fromARGB(255, 228, 42, 76);
     var primaryColor2 = Color(0xFFEDEDED);
     var primaryColor3 = Color(0xFFFFDBDB);
     var primaryColor4 = Color(0xFFEDE8E8);
+    int selected = -1;
 
     return Scaffold(
         backgroundColor: Color(0xFFFFDBDB),
@@ -127,187 +135,17 @@ class med extends StatelessWidget {
                     color: Colors.white,
                     margin: const EdgeInsets.symmetric(vertical: 20.0),
                     height: 50.0,
-                    child: ListView(
-                      // This next line does the trick.
-                      scrollDirection: Axis.horizontal,
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10),
-                          child: Container(
-                            width: 30.0,
-                            child: new Image.asset(
-                              'images/pill.png',
-                              width: 1.0,
-                              height: 1.0,
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10),
-                          child: Container(
-                            width: 30.0,
-                            child: new Image.asset(
-                              'images/pill.png',
-                              width: 1.0,
-                              height: 1.0,
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10),
-                          child: Container(
-                            width: 30.0,
-                            child: new Image.asset(
-                              'images/pill.png',
-                              width: 1.0,
-                              height: 1.0,
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10),
-                          child: Container(
-                            width: 30.0,
-                            child: new Image.asset(
-                              'images/pill.png',
-                              width: 1.0,
-                              height: 1.0,
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10),
-                          child: Container(
-                            width: 30.0,
-                            child: new Image.asset(
-                              'images/pill.png',
-                              width: 1.0,
-                              height: 1.0,
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10),
-                          child: Container(
-                            width: 30.0,
-                            child: new Image.asset(
-                              'images/pill.png',
-                              width: 1.0,
-                              height: 1.0,
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10),
-                          child: Container(
-                            width: 30.0,
-                            child: new Image.asset(
-                              'images/pill.png',
-                              width: 1.0,
-                              height: 1.0,
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10),
-                          child: Container(
-                            width: 30.0,
-                            child: new Image.asset(
-                              'images/pill.png',
-                              width: 1.0,
-                              height: 1.0,
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10),
-                          child: Container(
-                            width: 30.0,
-                            child: new Image.asset(
-                              'images/pill.png',
-                              width: 1.0,
-                              height: 1.0,
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10),
-                          child: Container(
-                            width: 30.0,
-                            child: new Image.asset(
-                              'images/pill.png',
-                              width: 1.0,
-                              height: 1.0,
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10),
-                          child: Container(
-                            width: 30.0,
-                            child: new Image.asset(
-                              'images/pill.png',
-                              width: 1.0,
-                              height: 1.0,
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10),
-                          child: Container(
-                            width: 30.0,
-                            child: new Image.asset(
-                              'images/pill.png',
-                              width: 1.0,
-                              height: 1.0,
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10),
-                          child: Container(
-                            width: 30.0,
-                            child: new Image.asset(
-                              'images/pill.png',
-                              width: 1.0,
-                              height: 1.0,
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10),
-                          child: Container(
-                            width: 30.0,
-                            child: new Image.asset(
-                              'images/pill.png',
-                              width: 1.0,
-                              height: 1.0,
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10),
-                          child: Container(
-                            width: 30.0,
-                            child: new Image.asset(
-                              'images/pill.png',
-                              width: 1.0,
-                              height: 1.0,
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10),
-                          child: Container(
-                            width: 30.0,
-                            child: new Image.asset(
-                              'images/pill.png',
-                              width: 1.0,
-                              height: 1.0,
-                            ),
-                          ),
-                        ),
-                      ],
+                    child: ScrollSnapList(
+                      onItemFocus: (index) {
+                        print("Center is $index");
+                        setState(() {
+                          selected = index;
+                        });
+                      },
+                      itemSize: 35,
+                      itemBuilder: (context,index) => pillIcon(index == selected ? Colors.blue : Colors.black),
+                      itemCount: 30,
+
                     ),
                   ),
                   Container(

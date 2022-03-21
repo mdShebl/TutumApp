@@ -1,15 +1,29 @@
+
+
 import 'package:flutter/material.dart';
 
-class SignUP_Doctor extends StatelessWidget {
+class SignUP_Doctor extends StatefulWidget {
+
+  @override
+  State<SignUP_Doctor> createState() => _SignUP_DoctorState();
+}
+
+class _SignUP_DoctorState extends State<SignUP_Doctor> {
+
+  bool isMale = true ;
+  late String Gender ;
   @override
   Widget build(BuildContext context) {
     var primaryColor = Color.fromARGB(255, 228, 42, 76);
+    Color colorr = Colors.grey;
     var primaryColor2 = Color(0xFFEDEDED);
     var nameController = TextEditingController();
     var ageController = TextEditingController();
     var numController = TextEditingController();
     var addressController = TextEditingController();
     var SpecializationController = TextEditingController();
+
+
 
     int _value = 1;
 
@@ -156,11 +170,11 @@ class SignUP_Doctor extends StatelessWidget {
                     height: 47,
                     //color: primaryColor2,
                     child: TextField(
-                      obscureText: true,
+
                       cursorColor: primaryColor,
                       controller: ageController,
                       textAlign: TextAlign.center,
-                      keyboardType: TextInputType.text,
+                      keyboardType: TextInputType.number,
                       decoration: InputDecoration(
                         hintText: '41',
                         hintStyle: TextStyle(fontSize: 16),
@@ -176,34 +190,35 @@ class SignUP_Doctor extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(width: 10,),
+                  SizedBox(width: 13,),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.all(0),
-                      child: Container(
-                        height: 50,
-                        child: ChoiceChip(
-                          labelPadding: EdgeInsets.all(6),
-                          labelStyle: TextStyle(color: Colors.white),
-                          avatar: Icon(Icons.male,size: 32,color: Colors.white,),
-                          backgroundColor: Colors.white,
-                          selectedColor: primaryColor,
-                          label: Text("Male     "),
-                          selected: true,
-                          shadowColor: Color.fromARGB(255, 228, 42, 76),
-                          shape: RoundedRectangleBorder(
-                              side: const BorderSide(
-                                  color: Color.fromARGB(255, 228, 42, 76),
-                                  style: BorderStyle.none,
-                                  width: 1),
-                              borderRadius: BorderRadius.circular(10.0)
+                      padding: EdgeInsets.only(left: 5 , right: 5),
+                      child: GestureDetector(
+                        onTap: (){
 
+                          setState(() {
+                            isMale = true;
+                            Gender = 'Male';
+                          });
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: isMale ? Colors.pink : Colors.black12,
+                            borderRadius: BorderRadius.circular(10.0),
                           ),
-
-                          onSelected: (bool value) {
-                            //Do whatever you want when the chip is selected
-                          },
-                          pressElevation: 10,
+                          height: 45,
+                          padding: EdgeInsets.all(6),
+                          child: Row(
+                            children: [
+                              Icon(Icons.male,size: 32,color: isMale ? Colors.white : Colors.black45,),
+                              Text("  Male  ",
+                                style:TextStyle(
+                              color: isMale ? Colors.white : Colors.black45,
+                              ),),
+                            ],
+                          ),
+                          // backgroundColor: Colors.black12,
 
                         ),
                       ),
@@ -212,29 +227,31 @@ class SignUP_Doctor extends StatelessWidget {
 
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.all(0),
-                      child: Container(
-                        height: 50,
-                        child: ChoiceChip(
-                          labelPadding: EdgeInsets.all(6),
-                          labelStyle: TextStyle(color: Colors.black45),
-                          avatar: Icon(Icons.female,size: 32,color: Colors.black45,),
-                          // backgroundColor: Colors.black12,
-                          selectedColor: primaryColor,
-                          label: Text("Female  "),
-                          selected: false,
-                          shadowColor: Color.fromARGB(255, 228, 42, 76),
-                          shape: RoundedRectangleBorder(
-                              side: const BorderSide(
-                                  color: Color.fromARGB(255, 228, 42, 76),
-                                  style: BorderStyle.none,
-                                  width: 1),
-
-                              borderRadius: BorderRadius.circular(10.0)),
-                          onSelected: (bool value) {
-                            //Do whatever you want when the chip is selected
-                          },
-                          pressElevation: 10,
+                      padding: EdgeInsets.only(left: 5 , right: 5),
+                      child: GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            isMale = false;
+                            Gender = 'Female';
+                          });
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: !isMale ? Colors.pink : Colors.black12,
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          height: 45,
+                          padding: EdgeInsets.all(6),
+                             child: Row(
+                               children: [
+                                 Icon(Icons.female,size: 32,color: !isMale ? Colors.white : Colors.black45,),
+                                 Text("Female  ",
+                                 style:TextStyle(
+                                   color: !isMale ? Colors.white : Colors.black45,
+                                 ),),
+                               ],
+                             ),
+                            // backgroundColor: Colors.black12,
 
                         ),
                       ),
@@ -317,7 +334,7 @@ class SignUP_Doctor extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: TextField(
                 cursorColor: primaryColor,
-                controller: numController,
+                controller: SpecializationController,
                 textAlign: TextAlign.center,
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
@@ -364,7 +381,7 @@ class SignUP_Doctor extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: TextField(
                 cursorColor: primaryColor,
-                controller: numController,
+                controller: addressController,
                 textAlign: TextAlign.center,
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
@@ -401,6 +418,13 @@ class SignUP_Doctor extends StatelessWidget {
                   onPressed: () {
                     print(nameController.text);
                     print(ageController.text);
+                    print(numController.text);
+                    print(SpecializationController.text);
+                    print(addressController.text);
+                    print(
+                      Gender
+                    );
+
                   },
                   child: const Text(
                     'Continue',

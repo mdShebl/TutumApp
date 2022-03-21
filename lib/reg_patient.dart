@@ -531,6 +531,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       onChanged: (String? newValue) {
         setState(() {
           dropdownValue = newValue!;
+          print(dropdownValue);
         });
       },
       items: <String>['A+', 'O+', 'BB+', 'AB+', 'O-', 'B-', 'AB-', 'A-']
