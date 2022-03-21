@@ -18,6 +18,9 @@ List mycolorss = <Color>[
   Colors.pink,
   Colors.deepOrangeAccent,
   Colors.brown,
+  Colors.purple,
+  Colors.grey,
+
 
 
 ];
@@ -61,41 +64,42 @@ class _MyHomePageState extends State<MyHomePage> {
   );
 
   Widget buildColorIcons() => Positioned(
-    child: Row(
-      children: [for (var i = 0; i < mycolorss.length; i++) buildIconBtn(mycolorss[i])],
+    child: SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: [for (var i = 0; i < mycolorss.length; i++) buildIconBtn(mycolorss[i])],
+      ),
     ),
   );
 
   Widget buildIconBtn(Color myColor) => Container(
     child: SingleChildScrollView(
-      child: Container(
-        child: Stack(
-          children: [
-            Positioned(
-              top: 12.5,
-              left: 12.5,
-              child: Icon(
-                Icons.check,
-                size: 20,
-                color: primaryColor == myColor ? myColor : Colors.transparent,
-              ),
+      child: Stack(
+        children: [
+          Positioned(
+            top: 12.5,
+            left: 12.5,
+            child: Icon(
+              Icons.check,
+              size: 20,
+              color: primaryColor == myColor ? myColor : Colors.transparent,
             ),
-            SingleChildScrollView(
-              child: IconButton(
-                icon: Icon(
-                  Icons.circle,
-                  color: myColor.withOpacity(0.65),
-                  size: 30,
-                ),
-                onPressed: () {
-                  setState(() {
-                    primaryColor = myColor;
-                  });
-                },
+          ),
+          SingleChildScrollView(
+            child: IconButton(
+              icon: Icon(
+                Icons.circle,
+                color: myColor.withOpacity(0.65),
+                size: 30,
               ),
+              onPressed: () {
+                setState(() {
+                  primaryColor = myColor;
+                });
+              },
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     ),
   );
