@@ -1,5 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:scroll_snap_list/scroll_snap_list.dart';
+import 'package:tutumapp/SvgIcons.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -15,6 +17,7 @@ List mycolorss = <Color>[
   Colors.indigo,
   Colors.pink,
   Colors.deepOrangeAccent,
+  Colors.brown,
 
 
 ];
@@ -22,18 +25,17 @@ Color primaryColor = mycolorss[0];
 
 class _MyHomePageState extends State<MyHomePage> {
   @override
+  int selected = -1;
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Color Filters"),
       ),
-      body: Center(
-        child: Stack(
-          children: [
-            buildImage(),
-            buildColorIcons(),
-          ],
-        ),
+      body: Stack(
+        children: [
+          buildImage(),
+          buildColorIcons(),
+        ],
       ),
     );
   }
@@ -41,50 +43,60 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget buildImage() => Container(
     width: MediaQuery.of(context).size.width,
     height: MediaQuery.of(context).size.height,
-    child: ColorFiltered(
-      colorFilter: ColorFilter.mode(primaryColor, BlendMode.hue),
-      child: Container(
-        color: Colors.white,
-        child: Image.asset(
-          "images/pill.png",
-          width: 100,
-          height: 100,
-        ),
-      ),
+    child: Container(
+      width: double.infinity,
+      child: ScrollSnapList(
+        itemBuilder:  (context,index) => pillIcon(index == selected ? primaryColor : Colors.black ),
+        itemSize: 30,
+        dynamicItemSize: true,
+        itemCount: 30,
+        onItemFocus: (index) {
+          print("Center is $index + ${primaryColor} ");
+          setState(() {
+            selected = index;
+          });
+
+        },        ),
     ),
   );
 
   Widget buildColorIcons() => Positioned(
     child: Row(
-      children: [for (var i = 0; i < 8; i++) buildIconBtn(mycolorss[i])],
+      children: [for (var i = 0; i < mycolorss.length; i++) buildIconBtn(mycolorss[i])],
     ),
   );
 
   Widget buildIconBtn(Color myColor) => Container(
-    child: Stack(
-      children: [
-        Positioned(
-          top: 12.5,
-          left: 12.5,
-          child: Icon(
-            Icons.check,
-            size: 20,
-            color: primaryColor == myColor ? myColor : Colors.transparent,
-          ),
+    child: SingleChildScrollView(
+      child: Container(
+        child: Stack(
+          children: [
+            Positioned(
+              top: 12.5,
+              left: 12.5,
+              child: Icon(
+                Icons.check,
+                size: 20,
+                color: primaryColor == myColor ? myColor : Colors.transparent,
+              ),
+            ),
+            SingleChildScrollView(
+              child: IconButton(
+                icon: Icon(
+                  Icons.circle,
+                  color: myColor.withOpacity(0.65),
+                  size: 30,
+                ),
+                onPressed: () {
+                  setState(() {
+                    primaryColor = myColor;
+                  });
+                },
+              ),
+            ),
+          ],
         ),
-        IconButton(
-          icon: Icon(
-            Icons.circle,
-            color: myColor.withOpacity(0.65),
-            size: 30,
-          ),
-          onPressed: () {
-            setState(() {
-              primaryColor = myColor;
-            });
-          },
-        ),
-      ],
+      ),
     ),
   );
 

@@ -14,21 +14,20 @@ class _SnappingPageState extends State<SnappingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold( body:
-      SizedBox(
-        height: 100,
-        width: MediaQuery.of(context).size.width,
-
+      Container(
+        width: double.infinity,
         child: ScrollSnapList(
-          itemBuilder:  (context,index) => pillIcon(index == selected ? Colors.blue : Colors.black),
-          itemSize: 35,
-         // dynamicItemSize: true,
-          itemCount: 35,
+          itemBuilder:  (context,index) => pillIcon(index == selected ? Colors.blue : Colors.black ),
+          itemSize: 30,
+          //dynamicItemSize: true,
+          itemCount: 30,
           onItemFocus: (index) {
             print("Center is $index");
             setState(() {
               selected = index;
             });
-          },        )
+
+          },        ),
       )
 
     /*  ScrollSnapList(
