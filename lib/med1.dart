@@ -143,7 +143,7 @@ class _medState extends State<med> {
                         });
                       },
                       itemSize: 35,
-                      itemBuilder: (context,index) => pillIcon(index == selected ? Colors.blue : Colors.black),
+                      itemBuilder: (context,index) => pillIcon(primaryColor,'bb'),
                       itemCount: 30,
 
                     ),

@@ -1,5 +1,6 @@
-import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:scroll_snap_list/scroll_snap_list.dart';
 import 'package:tutumapp/SvgIcons.dart';
 
@@ -7,6 +8,19 @@ class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
+
+List<String> pills = [
+  'images/pill-1-svgrepo-com.svg',
+  'images/pill-svgrepo-com.svg',
+  'images/apple-with-big-bite-svgrepo-com.svg',
+  'images/bottle-with-bubbles-svgrepo-com.svg',
+  'images/bottle-with-bubbles-svgrepo-com.svg',
+  'images/bottle-with-bubbles-svgrepo-com.svg',
+  'images/bottle-with-bubbles-svgrepo-com.svg',
+  'images/bottle-with-bubbles-svgrepo-com.svg',
+  'images/bottle-with-bubbles-svgrepo-com.svg',
+
+];
 
 List mycolorss = <Color>[
   Colors.red,
@@ -18,49 +32,63 @@ List mycolorss = <Color>[
   Colors.pink,
   Colors.deepOrangeAccent,
   Colors.brown,
-  Colors.purple,
+  Colors.amber,
   Colors.grey,
-
-
-
 ];
-Color primaryColor = mycolorss[0];
 
+Color primaryColor = mycolorss[0];
+int selected = 0;
 class _MyHomePageState extends State<MyHomePage> {
   @override
-  int selected = -1;
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Color Filters"),
+        title: const Text("Pill Color"),
+        backgroundColor: Colors.pink,
       ),
-      body: Stack(
+      body: Column(
         children: [
-          buildImage(),
+          Icon(Icons.keyboard_arrow_down_rounded),
+          Stack(
+            children: [
+              buildImage(),
+            ],
+          ),
+          Stack(
+          children: [
           buildColorIcons(),
+          ],
+          ),
+
         ],
       ),
     );
   }
 
-  Widget buildImage() => Container(
-    width: MediaQuery.of(context).size.width,
-    height: MediaQuery.of(context).size.height,
-    child: Container(
-      width: double.infinity,
-      child: ScrollSnapList(
-        itemBuilder:  (context,index) => pillIcon(index == selected ? primaryColor : Colors.black ),
-        itemSize: 30,
-        dynamicItemSize: true,
-        itemCount: 30,
-        onItemFocus: (index) {
-          print("Center is $index + ${primaryColor} ");
-          setState(() {
-            selected = index;
-          });
 
-        },        ),
-    ),
+  Widget buildImage() => Container(
+    color: Colors.black12,
+    width: MediaQuery.of(context).size.width,
+    height: 40,
+    child: ScrollSnapList(
+      itemBuilder:  (context,index) => SvgPicture.asset(
+        pills[index],
+        color: index == selected ? primaryColor : Colors.black,
+        width:30,
+        height:30,
+
+      ), //pillIcon(index == selected ? primaryColor : Colors.black ),
+      itemSize: 30,
+      dynamicItemSize: true,
+      //itemCount: 30,
+      onItemFocus: (index) {
+        print("Center is $index + $primaryColor ");
+        setState(() {
+          selected = index;
+        });
+
+      }, itemCount: pills.length,        ),
   );
 
   Widget buildColorIcons() => Positioned(

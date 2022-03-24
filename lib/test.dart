@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:scroll_snap_list/scroll_snap_list.dart';
+import 'package:tutumapp/dddd.dart';
 import 'SvgIcons.dart';
 
 class SnappingPage extends StatefulWidget {
@@ -17,7 +18,7 @@ class _SnappingPageState extends State<SnappingPage> {
       Container(
         width: double.infinity,
         child: ScrollSnapList(
-          itemBuilder:  (context,index) => pillIcon(index == selected ? Colors.blue : Colors.black ),
+          itemBuilder:  (context,index) => pillIcon(index,'bb'),
           itemSize: 30,
           //dynamicItemSize: true,
           itemCount: 30,
