@@ -121,8 +121,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 size: 30,
               ),
               onPressed: () {
+                print("Center is $primaryColor ");
                 setState(() {
                   primaryColor = myColor;
+
                 });
               },
             ),
