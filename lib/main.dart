@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-            home: Doc_profile(),
+            home: InvCode(),
             //WelcomeScreen(),
       //
       //theme: ThemeData(fontFamily: 'Monteserrat'),
