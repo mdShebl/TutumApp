@@ -9,6 +9,9 @@ import 'package:tutumapp/welcome_Scr.dart';
 import 'LogAs_Scr.dart';
 import 'Login_Scr.dart';
 import 'basma/p1.dart';
+import 'docList.dart';
+import 'docProfile.dart';
+import 'invite_code.dart';
 import 'reg_patient.dart';
 
 
@@ -22,7 +25,7 @@ class MyApp extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-            home: MyHomePage(),
+            home: Doc_profile(),
             //WelcomeScreen(),
       //
       //theme: ThemeData(fontFamily: 'Monteserrat'),

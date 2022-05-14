@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import "package:tutumapp/NavBar.dart";
 class PatHome extends StatefulWidget {
   @override
   State<PatHome> createState() => _PatHomeState();
@@ -17,16 +17,13 @@ class _PatHomeState extends State<PatHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: NavBar(),
         backgroundColor: primaryColor,
         appBar: AppBar(
           toolbarHeight: 80,
           elevation: 0.0,
           automaticallyImplyLeading: true,
-          leading: IconButton(
-            onPressed: () {},
-            icon: Image.asset('images/menu copy.png',
-            width: 22, height: 22,),
-          ),
+
           backgroundColor: primaryColor,
           title: Container(
             decoration: BoxDecoration(
