@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-            home: med(),
+            home: SignUP_Doctor(),
             //WelcomeScreen(),
       //
       //theme: ThemeData(fontFamily: 'Monteserrat'),
