@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import "package:tutumapp/NavBar.dart";
 class PatHome extends StatefulWidget {
   @override
   State<PatHome> createState() => _PatHomeState();
@@ -17,16 +17,13 @@ class _PatHomeState extends State<PatHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: NavBar(),
         backgroundColor: primaryColor,
         appBar: AppBar(
           toolbarHeight: 80,
           elevation: 0.0,
           automaticallyImplyLeading: true,
-          leading: IconButton(
-            onPressed: () {},
-            icon: Image.asset('images/menu copy.png',
-            width: 22, height: 22,),
-          ),
+
           backgroundColor: primaryColor,
           title: Container(
             decoration: BoxDecoration(
@@ -71,7 +68,7 @@ class _PatHomeState extends State<PatHome> {
               padding: const EdgeInsets.symmetric(horizontal: 13),
               child: IconButton(
                 onPressed: () {},
-                icon: Image.asset('images/plus.png',),
+                icon: Image.asset('images/pluss.png',),
               ),
             )
           ],
@@ -112,6 +109,7 @@ class _PatHomeState extends State<PatHome> {
               
             ),
             Expanded(
+              flex: 1,
               // mid box
               child: Container(
                 decoration: BoxDecoration(
@@ -441,7 +439,7 @@ class _PatHomeState extends State<PatHome> {
               ),
             ), //pills containers ###
             Expanded( // reports
-
+              flex: 1,
               child: Container(
                 decoration: BoxDecoration(
                   color: primaryColor2,
@@ -479,7 +477,6 @@ class _PatHomeState extends State<PatHome> {
                                               color: Colors.red[900],
                                             ),
                                           ),
-
                                         ],
                                       ),
                                       SizedBox(height: 30,),
@@ -605,10 +602,6 @@ class _PatHomeState extends State<PatHome> {
                 ),
               ),
             ),
-
-
-
-
           ],
         ));
   }

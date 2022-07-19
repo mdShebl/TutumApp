@@ -7,6 +7,7 @@ class SignUP_patient extends StatelessWidget {
     var primaryColor2 = Color(0xFFEDEDED);
     var nameController = TextEditingController();
     var ageController = TextEditingController();
+    var numController = TextEditingController();
     int _value = 1;
 
     return Scaffold(
@@ -51,7 +52,7 @@ class SignUP_patient extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(children: [
             Padding(
-              padding: const EdgeInsetsDirectional.all(12),
+              padding: const EdgeInsetsDirectional.only(start: 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: const [
@@ -73,7 +74,7 @@ class SignUP_patient extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(8, 2, 20, 10),
+              padding: const EdgeInsets.all(8.0),
               child: Container(
                 // color: primaryColor2,
                 child: TextField(
@@ -101,25 +102,28 @@ class SignUP_patient extends StatelessWidget {
             const SizedBox(
               height: 8,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Icon(
-                  Icons.man,
-                  color: Colors.black54,
-                  size: 27,
-                ),
-
-                Text(
-                  ' Gender',
-                  style: TextStyle(
-                    fontSize: 19,
-                    color: Colors.black45,
-                    fontWeight: FontWeight.w400,
-                    fontFamily: 'DancingScript',
+            Padding(
+              padding: const EdgeInsetsDirectional.only(start: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Icon(
+                    Icons.man,
+                    color: Colors.black54,
+                    size: 27,
                   ),
-                ),
-              ],
+
+                  Text(
+                    ' Gender',
+                    style: TextStyle(
+                      fontSize: 19,
+                      color: Colors.black45,
+                      fontWeight: FontWeight.w400,
+                      fontFamily: 'DancingScript',
+                    ),
+                  ),
+                ],
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -136,7 +140,7 @@ class SignUP_patient extends StatelessWidget {
                         avatar: Icon(Icons.male,size: 32,color: Colors.white,),
                         backgroundColor: Colors.white,
                         selectedColor: primaryColor,
-                        label: Text("   Male    "),
+                        label: Text("    Male     "),
                         selected: true,
                         shadowColor: Color.fromARGB(255, 228, 42, 76),
                         shape: RoundedRectangleBorder(
@@ -192,7 +196,7 @@ class SignUP_patient extends StatelessWidget {
             Row(
               children: const [
                 Padding(
-                  padding: const EdgeInsets.all(7),
+                  padding: const EdgeInsetsDirectional.only(start: 15),
                   child:
                   Text(
                     ' Date of birth',
@@ -205,6 +209,9 @@ class SignUP_patient extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+            const SizedBox(
+              height: 8,
             ),
             Row(
               children: [
@@ -295,7 +302,7 @@ class SignUP_patient extends StatelessWidget {
               children: const [
                 Expanded(
                   child: Padding(
-                    padding: EdgeInsets.only(left: 8, bottom: 3),
+                    padding: EdgeInsets.only(left: 16, bottom: 3),
                     child: Text(
                       ' Height',
                       style: TextStyle(
@@ -401,8 +408,7 @@ class SignUP_patient extends StatelessWidget {
               ),
             ]),
             Padding(
-              padding: const EdgeInsetsDirectional.all(12),
-              child: Row(
+              padding: const EdgeInsetsDirectional.only(start: 15),              child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: const [
                   Icon(
@@ -422,25 +428,28 @@ class SignUP_patient extends StatelessWidget {
                 ],
               ),
             ),
-            TextField(
-              cursorColor: primaryColor,
-              controller: nameController,
-              textAlign: TextAlign.center,
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                hintText: 'eg. 01023837647',
-                hintStyle: TextStyle(fontSize: 16),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: const BorderSide(
-                    // color: Color.fromARGB(255, 228, 42, 76),
-                    width: 0.0,
-                    style: BorderStyle.none,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextField(
+                cursorColor: primaryColor,
+                controller: numController,
+                textAlign: TextAlign.center,
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  hintText: 'eg. 01023837647',
+                  hintStyle: TextStyle(fontSize: 16),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: const BorderSide(
+                      // color: Color.fromARGB(255, 228, 42, 76),
+                      width: 0.0,
+                      style: BorderStyle.none,
+                    ),
                   ),
+                  filled: true,
+                  contentPadding: EdgeInsets.all(16),
+                  isDense: true,
                 ),
-                filled: true,
-                contentPadding: EdgeInsets.all(12),
-                isDense: true,
               ),
             ),
             SizedBox(height: 20,),
@@ -522,6 +531,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       onChanged: (String? newValue) {
         setState(() {
           dropdownValue = newValue!;
+          print(dropdownValue);
         });
       },
       items: <String>['A+', 'O+', 'BB+', 'AB+', 'O-', 'B-', 'AB-', 'A-']
