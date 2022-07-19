@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'Login_Scr.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  var primaryColor = Color(0xFFE42A4C);
-  var primaryColor2 = Color(0xFFEDEDED);
+  var primaryColor = const Color(0xFFE42A4C);
+  var primaryColor2 = const Color(0xFFEDEDED);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Padding(

@@ -6,9 +6,9 @@ class PatHome extends StatefulWidget {
 }
 
 class _PatHomeState extends State<PatHome> {
-  var primaryColor = Color.fromARGB(255, 228, 42, 76);
-  var primaryColor2 = Color(0xFFFFDBDB);
-  var primaryColor3 = Color(0xFFEDE8E8);
+  var primaryColor = const Color.fromARGB(255, 228, 42, 76);
+  var primaryColor2 = const Color(0xFFFFDBDB);
+  var primaryColor3 = const Color(0xFFEDE8E8);
   final now = DateTime.now();
   final berlinWallFell = DateTime.utc(1989, 11, 9);
   final moonLanding = DateTime.parse('1969-07-20 20:18:04Z');
@@ -46,15 +46,15 @@ class _PatHomeState extends State<PatHome> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
-                Text("Welcome, ",
+                const Text("Welcome, ",
                     style: TextStyle(
                         color: Colors.black87,
                         fontSize: 18,
                         fontWeight: FontWeight.w400)),
-                Text("Ahmed",
+                const Text("Ahmed",
                     style: TextStyle(
                       color: Colors.black87,
                       fontSize: 18,
@@ -75,7 +75,7 @@ class _PatHomeState extends State<PatHome> {
         ),
         body: Column(
           children: [
-            Container( // Time
+            SizedBox( // Time
               height: 60,
 
               width: double.infinity,
@@ -114,7 +114,7 @@ class _PatHomeState extends State<PatHome> {
               child: Container(
                 decoration: BoxDecoration(
                   color: primaryColor2,
-                  borderRadius: BorderRadius.only(topLeft: Radius.circular(40),topRight: Radius.circular(40))
+                  borderRadius: const BorderRadius.only(topLeft: Radius.circular(40),topRight: Radius.circular(40))
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
@@ -128,7 +128,7 @@ class _PatHomeState extends State<PatHome> {
                                 padding: const EdgeInsets.symmetric(vertical: 10),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
+                                  children: const [
                                     Icon(Icons.wb_sunny_rounded,
                                     color: Colors.yellowAccent,
                                     size: 25,),
@@ -158,7 +158,7 @@ class _PatHomeState extends State<PatHome> {
                                             color: Colors.red[900],
                                           ),
                                         ),
-                                        SizedBox(height: 10,),
+                                        const SizedBox(height: 10,),
                                         Container(          //this grey cotainer
                                           width: 153,
                                           height: 48.0,
@@ -166,19 +166,19 @@ class _PatHomeState extends State<PatHome> {
                                             padding: const EdgeInsets.all(8.0),
                                             child: Row(
                                               children: [
-                                                Image(image: AssetImage('images/pill.png')
+                                                const Image(image: AssetImage('images/pill.png')
                                                 ,height: 30,
                                                 width: 30,),
-                                                SizedBox(width: 8,),
+                                                const SizedBox(width: 8,),
                                                 Container(height: 40,width: 2,
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                   color: Colors.grey,
                                                 ),),
-                                                SizedBox(width: 8,),
+                                                const SizedBox(width: 8,),
                                                 Column(
                                                   crossAxisAlignment: CrossAxisAlignment.center,
                                                   mainAxisAlignment: MainAxisAlignment.center,
-                                                  children: [
+                                                  children: const [
                                                     Text('Med A',
                                                       style: TextStyle(
                                                         fontSize: 16,
@@ -192,8 +192,8 @@ class _PatHomeState extends State<PatHome> {
                                                       ),),
                                                   ],
                                                 ),
-                                                SizedBox(width: 12,),
-                                                Image(image: AssetImage('images/checked.png')
+                                                const SizedBox(width: 12,),
+                                                const Image(image: AssetImage('images/checked.png')
                                                   ,height: 22,
                                                   width: 22,),
                                               ],
@@ -204,7 +204,7 @@ class _PatHomeState extends State<PatHome> {
                                             borderRadius: BorderRadius.circular(4.0),
                                           ),
                                         ), // Grey container 1 ####
-                                        SizedBox(height: 10,),
+                                        const SizedBox(height: 10,),
                                         Text(
                                           '11:30 AM',
                                           style: TextStyle(
@@ -213,7 +213,7 @@ class _PatHomeState extends State<PatHome> {
                                             color: Colors.red[900],
                                           ),
                                         ),
-                                        SizedBox(height: 10,),
+                                        const SizedBox(height: 10,),
                                         Container(          //this grey cotainer
                                           width: 153,
                                           height: 48.0,
@@ -221,19 +221,19 @@ class _PatHomeState extends State<PatHome> {
                                             padding: const EdgeInsets.all(8.0),
                                             child: Row(
                                               children: [
-                                                Image(image: AssetImage('images/pill.png')
+                                                const Image(image: AssetImage('images/pill.png')
                                                   ,height: 30,
                                                   width: 30,),
-                                                SizedBox(width: 8,),
+                                                const SizedBox(width: 8,),
                                                 Container(height: 40,width: 2,
-                                                  decoration: BoxDecoration(
+                                                  decoration: const BoxDecoration(
                                                     color: Colors.grey,
                                                   ),),
-                                                SizedBox(width: 8,),
+                                                const SizedBox(width: 8,),
                                                 Column(
                                                   crossAxisAlignment: CrossAxisAlignment.center,
                                                   mainAxisAlignment: MainAxisAlignment.center,
-                                                  children: [
+                                                  children: const [
                                                     Text('Med A',
                                                       style: TextStyle(
                                                         fontSize: 16,
@@ -247,8 +247,8 @@ class _PatHomeState extends State<PatHome> {
                                                       ),),
                                                   ],
                                                 ),
-                                                SizedBox(width: 12,),
-                                                Image(image: AssetImage('images/checked.png')
+                                                const SizedBox(width: 12,),
+                                                const Image(image: AssetImage('images/checked.png')
                                                   ,height: 22,
                                                   width: 22,),
                                               ],
@@ -259,7 +259,7 @@ class _PatHomeState extends State<PatHome> {
                                             borderRadius: BorderRadius.circular(4.0),
                                           ),
                                         ), // Grey container 2 ####
-                                        SizedBox(height: 10,),
+                                        const SizedBox(height: 10,),
                                       ],
                                     ),
                                   ),
@@ -277,7 +277,7 @@ class _PatHomeState extends State<PatHome> {
                           ),//decoration: BoxDecoration,
                         ),
                       ),
-                      SizedBox(width: 5.0,),
+                      const SizedBox(width: 5.0,),
                       Expanded(
                         child: Container(
                           child: Column(
@@ -288,8 +288,8 @@ class _PatHomeState extends State<PatHome> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Image.asset('images/half-moon.png',width: 21,height: 21,),
-                                    SizedBox(width: 7,),
-                                    Text('Evening'
+                                    const SizedBox(width: 7,),
+                                    const Text('Evening'
                                       ,style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 20.0,
@@ -314,7 +314,7 @@ class _PatHomeState extends State<PatHome> {
                                             color: Colors.red[900],
                                           ),
                                         ),
-                                        SizedBox(height: 10,),
+                                        const SizedBox(height: 10,),
                                         Container(          //this grey cotainer
                                           width: 153,
                                           height: 48.0,
@@ -322,19 +322,19 @@ class _PatHomeState extends State<PatHome> {
                                             padding: const EdgeInsets.all(8.0),
                                             child: Row(
                                               children: [
-                                                Image(image: AssetImage('images/pill.png')
+                                                const Image(image: AssetImage('images/pill.png')
                                                   ,height: 30,
                                                   width: 30,),
-                                                SizedBox(width: 8,),
+                                                const SizedBox(width: 8,),
                                                 Container(height: 40,width: 2,
-                                                  decoration: BoxDecoration(
+                                                  decoration: const BoxDecoration(
                                                     color: Colors.grey,
                                                   ),),
-                                                SizedBox(width: 8,),
+                                                const SizedBox(width: 8,),
                                                 Column(
                                                   crossAxisAlignment: CrossAxisAlignment.center,
                                                   mainAxisAlignment: MainAxisAlignment.center,
-                                                  children: [
+                                                  children: const [
                                                     Text('Med A',
                                                       style: TextStyle(
                                                         fontSize: 16,
@@ -348,8 +348,8 @@ class _PatHomeState extends State<PatHome> {
                                                       ),),
                                                   ],
                                                 ),
-                                                SizedBox(width: 12,),
-                                                Image(image: AssetImage('images/checked.png')
+                                                const SizedBox(width: 12,),
+                                                const Image(image: AssetImage('images/checked.png')
                                                   ,height: 22,
                                                   width: 22,),
                                               ],
@@ -360,7 +360,7 @@ class _PatHomeState extends State<PatHome> {
                                             borderRadius: BorderRadius.circular(4.0),
                                           ),
                                         ), // Grey container 1 ####
-                                        SizedBox(height: 10,),
+                                        const SizedBox(height: 10,),
                                         Text(
                                           '7:30 PM',
                                           style: TextStyle(
@@ -369,7 +369,7 @@ class _PatHomeState extends State<PatHome> {
                                             color: Colors.red[900],
                                           ),
                                         ),
-                                        SizedBox(height: 10,),
+                                        const SizedBox(height: 10,),
                                         Container(          //this grey cotainer
                                           width: 153,
                                           height: 48.0,
@@ -377,19 +377,19 @@ class _PatHomeState extends State<PatHome> {
                                             padding: const EdgeInsets.all(8.0),
                                             child: Row(
                                               children: [
-                                                Image(image: AssetImage('images/pill.png')
+                                                const Image(image: AssetImage('images/pill.png')
                                                   ,height: 30,
                                                   width: 30,),
-                                                SizedBox(width: 8,),
+                                                const SizedBox(width: 8,),
                                                 Container(height: 40,width: 2,
-                                                  decoration: BoxDecoration(
+                                                  decoration: const BoxDecoration(
                                                     color: Colors.grey,
                                                   ),),
-                                                SizedBox(width: 8,),
+                                                const SizedBox(width: 8,),
                                                 Column(
                                                   crossAxisAlignment: CrossAxisAlignment.center,
                                                   mainAxisAlignment: MainAxisAlignment.center,
-                                                  children: [
+                                                  children: const [
                                                     Text('Med A',
                                                       style: TextStyle(
                                                         fontSize: 16,
@@ -403,8 +403,8 @@ class _PatHomeState extends State<PatHome> {
                                                       ),),
                                                   ],
                                                 ),
-                                                SizedBox(width: 12,),
-                                                Image(image: AssetImage('images/checked.png')
+                                                const SizedBox(width: 12,),
+                                                const Image(image: AssetImage('images/checked.png')
                                                   ,height: 22,
                                                   width: 22,),
                                               ],
@@ -415,7 +415,7 @@ class _PatHomeState extends State<PatHome> {
                                             borderRadius: BorderRadius.circular(4.0),
                                           ),
                                         ), // Grey container 2 ####
-                                        SizedBox(height: 10,),
+                                        const SizedBox(height: 10,),
                                       ],
                                     ),
                                   ),
@@ -451,7 +451,7 @@ class _PatHomeState extends State<PatHome> {
 
                     children: [
                       Expanded(
-                        child: Container(
+                        child: SizedBox(
                           height: 167,
                           child: Container(
 
@@ -468,7 +468,7 @@ class _PatHomeState extends State<PatHome> {
                                           Image.asset('images/heart.png',
                                           width: 30,
                                           height: 30,),
-                                          SizedBox(width: 8,),
+                                          const SizedBox(width: 8,),
                                           Text(
                                             'Heart Rate',
                                             style: TextStyle(
@@ -479,8 +479,8 @@ class _PatHomeState extends State<PatHome> {
                                           ),
                                         ],
                                       ),
-                                      SizedBox(height: 30,),
-                                      Text(
+                                      const SizedBox(height: 30,),
+                                      const Text(
                                         '98 bpm',
                                         style: TextStyle(
                                           fontSize: 22.0,
@@ -488,14 +488,14 @@ class _PatHomeState extends State<PatHome> {
                                           color: Colors.black87,
                                         ),
                                       ),
-                                      SizedBox(height: 28,),
+                                      const SizedBox(height: 28,),
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
                                           Image.asset('images/chart-down.png',
                                             width: 17,
                                             height: 17,),
-                                          SizedBox(width: 4,),
+                                          const SizedBox(width: 4,),
                                           Text(
                                             '5% less than',
                                             style: TextStyle(
@@ -520,9 +520,9 @@ class _PatHomeState extends State<PatHome> {
                           ),
                         ),
                       ),
-                      SizedBox(width: 5.0,),
+                      const SizedBox(width: 5.0,),
                       Expanded(
-                        child: Container(
+                        child: SizedBox(
 
                           height: 167,
 
@@ -539,7 +539,7 @@ class _PatHomeState extends State<PatHome> {
                                           Image.asset('images/oxygen.png',
                                             width: 30,
                                             height: 30,),
-                                          SizedBox(width: 8,),
+                                          const SizedBox(width: 8,),
                                           Text(
                                             'Blood Oxygen',
                                             style: TextStyle(
@@ -551,8 +551,8 @@ class _PatHomeState extends State<PatHome> {
 
                                         ],
                                       ),
-                                      SizedBox(height: 30,),
-                                      Text(
+                                      const SizedBox(height: 30,),
+                                      const Text(
                                         '96%',
                                         style: TextStyle(
                                           fontSize: 25.0,
@@ -560,7 +560,7 @@ class _PatHomeState extends State<PatHome> {
                                           color: Colors.black87,
                                         ),
                                       ),
-                                      SizedBox(height: 26,),
+                                      const SizedBox(height: 26,),
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
@@ -572,7 +572,7 @@ class _PatHomeState extends State<PatHome> {
                                               color: Colors.red[900],
                                             ),
                                           ),
-                                          SizedBox(width: 4,),
+                                          const SizedBox(width: 4,),
                                           Text(
                                             '10:31 AM',
                                             style: TextStyle(

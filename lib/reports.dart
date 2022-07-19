@@ -9,10 +9,10 @@ class Reports extends StatefulWidget {
 }
 
 class _ReportsState extends State<Reports> {
-  var primaryColor = Color.fromARGB(255, 228, 42, 76);
-  var primaryColor2 = Color(0xFFEDEDED);
-  var primaryColor3 = Color(0xFFFFDBDB);
-  var primaryColor4 = Color(0xFFEDE8E8);
+  var primaryColor = const Color.fromARGB(255, 228, 42, 76);
+  var primaryColor2 = const Color(0xFFEDEDED);
+  var primaryColor3 = const Color(0xFFFFDBDB);
+  var primaryColor4 = const Color(0xFFEDE8E8);
 
   var oxController = TextEditingController();
   var ageController = TextEditingController();
@@ -21,7 +21,7 @@ class _ReportsState extends State<Reports> {
     return
         // debugShowCheckedModeBanner: false,
         Scaffold(
-      backgroundColor: Color(0xFFFFDBDB),
+      backgroundColor: const Color(0xFFFFDBDB),
       appBar: AppBar(
         toolbarHeight: 100,
         elevation: 0.0,
@@ -33,7 +33,7 @@ class _ReportsState extends State<Reports> {
               Padding(
                 padding: const EdgeInsets.only(left: 50, top: 25.0, right: 30),
                 child: Center(
-                  child: new Image.asset(
+                  child: Image.asset(
                     'images/man.png',
                     width: 40.0,
                     height: 40.0,
@@ -43,7 +43,7 @@ class _ReportsState extends State<Reports> {
               Padding(
                 padding: const EdgeInsets.only(left: 35, top: 25.0, right: 0),
                 child: RichText(
-                  text: TextSpan(
+                  text: const TextSpan(
                     text: 'Reportes',
                     style: TextStyle(
                       fontSize: 25,
@@ -63,20 +63,20 @@ class _ReportsState extends State<Reports> {
         child: Container(
           height: 530,
           width: 420,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Color(0xFFEDE8E8),
-            borderRadius: new BorderRadius.only(
-              topLeft: const Radius.circular(30.0),
-              topRight: const Radius.circular(30.0),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30.0),
+              topRight: Radius.circular(30.0),
             ),
           ),
           child: Padding(
             padding: const EdgeInsets.only(left: 15, right: 15),
             child: Column(children: [
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
-              Center(
+              const Center(
                 child: Text(
                   'Your measurements and the health of your body',
                   style: TextStyle(
@@ -87,13 +87,13 @@ class _ReportsState extends State<Reports> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Row(
                 children: [
                   Expanded(
-                    child: Container(
+                    child: SizedBox(
                       height: 167,
                       child: Container(
 
@@ -110,7 +110,7 @@ class _ReportsState extends State<Reports> {
                                       Image.asset('images/heart.png',
                                         width: 30,
                                         height: 30,),
-                                      SizedBox(width: 8,),
+                                      const SizedBox(width: 8,),
                                       Text(
                                         'Heart Rate',
                                         style: TextStyle(
@@ -121,8 +121,8 @@ class _ReportsState extends State<Reports> {
                                       ),
                                     ],
                                   ),
-                                  SizedBox(height: 30,),
-                                  Text(
+                                  const SizedBox(height: 30,),
+                                  const Text(
                                     '98 bpm',
                                     style: TextStyle(
                                       fontSize: 22.0,
@@ -130,14 +130,14 @@ class _ReportsState extends State<Reports> {
                                       color: Colors.black87,
                                     ),
                                   ),
-                                  SizedBox(height: 28,),
+                                  const SizedBox(height: 28,),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Image.asset('images/chart-down.png',
                                         width: 17,
                                         height: 17,),
-                                      SizedBox(width: 4,),
+                                      const SizedBox(width: 4,),
                                       Text(
                                         '5% less than',
                                         style: TextStyle(
@@ -162,9 +162,9 @@ class _ReportsState extends State<Reports> {
                       ),
                     ),
                   ),
-                  SizedBox(width: 5.0,),
+                  const SizedBox(width: 5.0,),
                   Expanded(
-                    child: Container(
+                    child: SizedBox(
 
                       height: 167,
 
@@ -181,7 +181,7 @@ class _ReportsState extends State<Reports> {
                                       Image.asset('images/oxygen.png',
                                         width: 30,
                                         height: 30,),
-                                      SizedBox(width: 8,),
+                                      const SizedBox(width: 8,),
                                       Text(
                                         'Blood Oxygen',
                                         style: TextStyle(
@@ -193,8 +193,8 @@ class _ReportsState extends State<Reports> {
 
                                     ],
                                   ),
-                                  SizedBox(height: 30,),
-                                  Text(
+                                  const SizedBox(height: 30,),
+                                  const Text(
                                     '96%',
                                     style: TextStyle(
                                       fontSize: 25.0,
@@ -202,7 +202,7 @@ class _ReportsState extends State<Reports> {
                                       color: Colors.black87,
                                     ),
                                   ),
-                                  SizedBox(height: 26,),
+                                  const SizedBox(height: 26,),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
@@ -214,7 +214,7 @@ class _ReportsState extends State<Reports> {
                                           color: Colors.red[900],
                                         ),
                                       ),
-                                      SizedBox(width: 4,),
+                                      const SizedBox(width: 4,),
                                       Text(
                                         '10:31 AM',
                                         style: TextStyle(
@@ -240,13 +240,13 @@ class _ReportsState extends State<Reports> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Row(
                 children: [
                   Expanded(
-                    child: Container(
+                    child: SizedBox(
                       height: 167,
                       child: Container(
 
@@ -263,7 +263,7 @@ class _ReportsState extends State<Reports> {
                                       Image.asset('images/thermometer.png',
                                         width: 30,
                                         height: 30,),
-                                      SizedBox(width: 8,),
+                                      const SizedBox(width: 8,),
                                       Text(
                                         'Temperature ',
                                         style: TextStyle(
@@ -274,8 +274,8 @@ class _ReportsState extends State<Reports> {
                                       ),
                                     ],
                                   ),
-                                  SizedBox(height: 30,),
-                                  Text(
+                                  const SizedBox(height: 30,),
+                                  const Text(
                                     '37 °C',
                                     style: TextStyle(
                                       fontSize: 22.0,
@@ -283,7 +283,7 @@ class _ReportsState extends State<Reports> {
                                       color: Colors.black87,
                                     ),
                                   ),
-                                  SizedBox(height: 28,),
+                                  const SizedBox(height: 28,),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
@@ -295,7 +295,7 @@ class _ReportsState extends State<Reports> {
                                           color: Colors.red[900],
                                         ),
                                       ),
-                                      SizedBox(width: 4,),
+                                      const SizedBox(width: 4,),
                                       Text(
                                         '10:31 AM',
                                         style: TextStyle(
@@ -320,9 +320,9 @@ class _ReportsState extends State<Reports> {
                       ),
                     ),
                   ),
-                  SizedBox(width: 5.0,),
+                  const SizedBox(width: 5.0,),
                   Expanded(
-                    child: Container(
+                    child: SizedBox(
 
                       height: 167,
 
@@ -339,7 +339,7 @@ class _ReportsState extends State<Reports> {
                                       Image.asset('images/blood-pressure.png',
                                         width: 25,
                                         height: 25,),
-                                      SizedBox(width: 8,),
+                                      const SizedBox(width: 8,),
                                       Text(
                                         'Blood pressure',
                                         style: TextStyle(
@@ -351,8 +351,8 @@ class _ReportsState extends State<Reports> {
 
                                     ],
                                   ),
-                                  SizedBox(height: 30,),
-                                  Text(
+                                  const SizedBox(height: 30,),
+                                  const Text(
                                     '131/86',
                                     style: TextStyle(
                                       fontSize: 25.0,
@@ -360,7 +360,7 @@ class _ReportsState extends State<Reports> {
                                       color: Colors.black87,
                                     ),
                                   ),
-                                  SizedBox(height: 26,),
+                                  const SizedBox(height: 26,),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
@@ -372,7 +372,7 @@ class _ReportsState extends State<Reports> {
                                           color: Colors.red[900],
                                         ),
                                       ),
-                                      SizedBox(width: 4,),
+                                      const SizedBox(width: 4,),
                                       Text(
                                         '10:31 AM',
                                         style: TextStyle(
@@ -398,11 +398,11 @@ class _ReportsState extends State<Reports> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               RichText(
-                text: TextSpan(
+                text: const TextSpan(
                   text: ' Make sure to ',
                   style: TextStyle(
                     fontSize: 16,
@@ -410,7 +410,7 @@ class _ReportsState extends State<Reports> {
                     color: Colors.black,
                     fontFamily: 'Montserrat',
                   ),
-                  children: const <TextSpan>[
+                  children: <TextSpan>[
                     TextSpan(
                         text: 'wear the watch ',
                         style: TextStyle(
@@ -422,7 +422,7 @@ class _ReportsState extends State<Reports> {
                   ],
                 ),
               ),
-              Text(
+              const Text(
                 'before taking the measurement',
                 style: TextStyle(
                   fontSize: 16,

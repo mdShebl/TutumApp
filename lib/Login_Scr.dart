@@ -1,10 +1,9 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
-  var primaryColor = Color(0xFFE42A4C);
-  var primaryColor2 = Color(0xFFEDEDED);
+  var primaryColor = const Color(0xFFE42A4C);
+  var primaryColor2 = const Color(0xFFEDEDED);
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
 
@@ -31,7 +30,7 @@ class LoginScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Container(
+              SizedBox(
                 width: 105,
                 height: 105,
                 child: Image.asset(
@@ -103,7 +102,7 @@ class LoginScreen extends StatelessWidget {
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
                       hintText: 'Tap,  & Enter Email Address',
-                      hintStyle: TextStyle(fontSize: 16),
+                      hintStyle: const TextStyle(fontSize: 16),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: const BorderSide(
@@ -112,7 +111,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       filled: true,
-                      contentPadding: EdgeInsets.all(16),
+                      contentPadding: const EdgeInsets.all(16),
                     ),
                   ),
                 ),
@@ -161,7 +160,7 @@ class LoginScreen extends StatelessWidget {
                         Icons.remove_red_eye,
                         color: Colors.pink.withOpacity(.5),
                       ),
-                      hintStyle: TextStyle(fontSize: 16),
+                      hintStyle: const TextStyle(fontSize: 16),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: const BorderSide(
@@ -170,7 +169,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       filled: true,
-                      contentPadding: EdgeInsets.all(16),
+                      contentPadding: const EdgeInsets.all(16),
                     ),
                   ),
                 ),

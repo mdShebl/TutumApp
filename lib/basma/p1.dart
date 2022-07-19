@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 class myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var primaryColor = Color.fromARGB(255, 228, 42, 76);
-    var primaryColor2 = Color(0xFFEDEDED);
+    var primaryColor = const Color.fromARGB(255, 228, 42, 76);
+    var primaryColor2 = const Color(0xFFEDEDED);
     var nameController = TextEditingController();
     var ageController = TextEditingController();
     int _value = 1;
@@ -22,7 +22,7 @@ class myapp extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(top: 20.0),
               child: RichText(
-                text: TextSpan(
+                text: const TextSpan(
                   text: 'Sign up - ',
                   style: TextStyle(
                     fontSize: 20,
@@ -30,7 +30,7 @@ class myapp extends StatelessWidget {
                     color: Colors.black,
                     fontFamily: 'Montserrat',
                   ),
-                  children: const <TextSpan>[
+                  children: <TextSpan>[
                     TextSpan(
                         text: ' Patient',
                         style: TextStyle(
@@ -45,7 +45,7 @@ class myapp extends StatelessWidget {
             ),
           ),
           leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: Colors.black),
+            icon: const Icon(Icons.arrow_back, color: Colors.black),
             onPressed: () => Navigator.of(context).pop(),
           ),
         ),
@@ -57,9 +57,9 @@ class myapp extends StatelessWidget {
                 height: 20,
               ),
               Row(
-                children: [
+                children: const [
                   Padding(
-                    padding: const EdgeInsets.only(left: 8),
+                    padding: EdgeInsets.only(left: 8),
                     child: Text(
                       ' Enter your name',
                       style: TextStyle(
@@ -83,7 +83,7 @@ class myapp extends StatelessWidget {
                     keyboardType: TextInputType.name,
                     decoration: InputDecoration(
                       hintText: 'Ahmed',
-                      hintStyle: TextStyle(fontSize: 16),
+                      hintStyle: const TextStyle(fontSize: 16),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: const BorderSide(
@@ -92,15 +92,15 @@ class myapp extends StatelessWidget {
                         ),
                       ),
                       filled: false,
-                      contentPadding: EdgeInsets.all(16),
+                      contentPadding: const EdgeInsets.all(16),
                     ),
                   ),
                 ),
               ),
               Row(
-                children: [
+                children: const [
                   Padding(
-                    padding: const EdgeInsets.only(left: 165),
+                    padding: EdgeInsets.only(left: 165),
                     child: Text(
                       ' Gender',
                       style: TextStyle(
@@ -118,13 +118,13 @@ class myapp extends StatelessWidget {
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(0, 5, 0, 30),
-                      child: Container(
+                      child: SizedBox(
                         height: 50,
                         child: ChoiceChip(
-                          label: Text("      Male      "),
+                          label: const Text("      Male      "),
                           selected: false,
                           shape: RoundedRectangleBorder(
-                              side: BorderSide(
+                              side: const BorderSide(
                                   color: Color.fromARGB(255, 228, 42, 76),
                                   width: 1),
                               borderRadius: BorderRadius.circular(10.0)),
@@ -139,15 +139,15 @@ class myapp extends StatelessWidget {
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(0, 5, 0, 30),
-                      child: Container(
+                      child: SizedBox(
                         height: 50,
                         child: ChoiceChip(
-                          label: Text("   female   "),
+                          label: const Text("   female   "),
                           selected: false,
                           backgroundColor: Colors.white,
-                          shadowColor: Color.fromARGB(255, 228, 42, 76),
+                          shadowColor: const Color.fromARGB(255, 228, 42, 76),
                           shape: RoundedRectangleBorder(
-                              side: BorderSide(
+                              side: const BorderSide(
                                   color: Color.fromARGB(255, 228, 42, 76),
                                   width: 1),
                               borderRadius: BorderRadius.circular(10.0)),
@@ -162,9 +162,9 @@ class myapp extends StatelessWidget {
                 ],
               ),
               Row(
-                children: [
+                children: const [
                   Padding(
-                    padding: const EdgeInsets.only(left: 8, bottom: 5),
+                    padding: EdgeInsets.only(left: 8, bottom: 5),
                     child: Text(
                       ' Date of birth',
                       style: TextStyle(
@@ -190,7 +190,7 @@ class myapp extends StatelessWidget {
                         keyboardType: TextInputType.text,
                         decoration: InputDecoration(
                           hintText: '1995',
-                          hintStyle: TextStyle(fontSize: 16),
+                          hintStyle: const TextStyle(fontSize: 16),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
                             borderSide: const BorderSide(
@@ -199,7 +199,7 @@ class myapp extends StatelessWidget {
                             ),
                           ),
                           filled: false,
-                          contentPadding: EdgeInsets.all(12),
+                          contentPadding: const EdgeInsets.all(12),
                           isDense: true,
                         ),
                       ),
@@ -216,7 +216,7 @@ class myapp extends StatelessWidget {
                         keyboardType: TextInputType.text,
                         decoration: InputDecoration(
                           hintText: '05',
-                          hintStyle: TextStyle(fontSize: 16),
+                          hintStyle: const TextStyle(fontSize: 16),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
                             borderSide: const BorderSide(
@@ -225,7 +225,7 @@ class myapp extends StatelessWidget {
                             ),
                           ),
                           filled: false,
-                          contentPadding: EdgeInsets.all(12),
+                          contentPadding: const EdgeInsets.all(12),
                           isDense: true,
                         ),
                       ),
@@ -242,7 +242,7 @@ class myapp extends StatelessWidget {
                         keyboardType: TextInputType.text,
                         decoration: InputDecoration(
                           hintText: '15',
-                          hintStyle: TextStyle(fontSize: 16),
+                          hintStyle: const TextStyle(fontSize: 16),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
                             borderSide: const BorderSide(
@@ -251,7 +251,7 @@ class myapp extends StatelessWidget {
                             ),
                           ),
                           filled: false,
-                          contentPadding: EdgeInsets.all(12),
+                          contentPadding: const EdgeInsets.all(12),
                           isDense: true,
                         ),
                       ),
@@ -260,10 +260,10 @@ class myapp extends StatelessWidget {
                 ],
               ),
               Row(
-                children: [
+                children: const [
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 8, bottom: 3),
+                      padding: EdgeInsets.only(left: 8, bottom: 3),
                       child: Text(
                         ' Height',
                         style: TextStyle(
@@ -277,7 +277,7 @@ class myapp extends StatelessWidget {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.only(
+                      padding: EdgeInsets.only(
                         left: 14,
                         bottom: 3,
                       ),
@@ -294,7 +294,7 @@ class myapp extends StatelessWidget {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 0, bottom: 3),
+                      padding: EdgeInsets.only(left: 0, bottom: 3),
                       child: Text(
                         ' Blood type',
                         style: TextStyle(
@@ -320,7 +320,7 @@ class myapp extends StatelessWidget {
                       keyboardType: TextInputType.text,
                       decoration: InputDecoration(
                         hintText: '150',
-                        hintStyle: TextStyle(fontSize: 16),
+                        hintStyle: const TextStyle(fontSize: 16),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                           borderSide: const BorderSide(
@@ -329,7 +329,7 @@ class myapp extends StatelessWidget {
                           ),
                         ),
                         filled: false,
-                        contentPadding: EdgeInsets.all(12),
+                        contentPadding: const EdgeInsets.all(12),
                         isDense: true,
                       ),
                     ),
@@ -346,7 +346,7 @@ class myapp extends StatelessWidget {
                       keyboardType: TextInputType.text,
                       decoration: InputDecoration(
                         hintText: '58',
-                        hintStyle: TextStyle(fontSize: 16),
+                        hintStyle: const TextStyle(fontSize: 16),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                           borderSide: const BorderSide(
@@ -355,23 +355,23 @@ class myapp extends StatelessWidget {
                           ),
                         ),
                         filled: false,
-                        contentPadding: EdgeInsets.all(12),
+                        contentPadding: const EdgeInsets.all(12),
                         isDense: true,
                       ),
                     ),
                   ),
                 ),
-                Expanded(
+                const Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 0, 28, 30),
+                    padding: EdgeInsets.fromLTRB(0, 0, 28, 30),
                     child: MyStatefulWidget(),
                   ),
                 ),
               ]),
               Row(
-                children: [
+                children: const [
                   Padding(
-                    padding: const EdgeInsets.only(left: 8, bottom: 0),
+                    padding: EdgeInsets.only(left: 8, bottom: 0),
                     child: Text(
                       ' Phone number ',
                       style: TextStyle(
@@ -393,7 +393,7 @@ class myapp extends StatelessWidget {
                   keyboardType: TextInputType.name,
                   decoration: InputDecoration(
                     hintText: '01023837647',
-                    hintStyle: TextStyle(fontSize: 16),
+                    hintStyle: const TextStyle(fontSize: 16),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                       borderSide: const BorderSide(
@@ -402,7 +402,7 @@ class myapp extends StatelessWidget {
                       ),
                     ),
                     filled: false,
-                    contentPadding: EdgeInsets.all(12),
+                    contentPadding: const EdgeInsets.all(12),
                     isDense: true,
                   ),
                 ),
@@ -413,7 +413,7 @@ class myapp extends StatelessWidget {
                   // color: primaryColor2,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Color.fromARGB(255, 228, 42, 76),
+                      primary: const Color.fromARGB(255, 228, 42, 76),
                       minimumSize: const Size.fromHeight(50), // NEW
                     ),
                     onPressed: () {},
@@ -425,7 +425,7 @@ class myapp extends StatelessWidget {
                 ),
               ),
               RichText(
-                text: TextSpan(
+                text: const TextSpan(
                   text: 'Already have an account?',
                   style: TextStyle(
                     fontSize: 16,
@@ -433,7 +433,7 @@ class myapp extends StatelessWidget {
                     color: Colors.black,
                     fontFamily: 'Montserrat',
                   ),
-                  children: const <TextSpan>[
+                  children: <TextSpan>[
                     TextSpan(
                         text: 'Sign in',
                         style: TextStyle(
@@ -472,7 +472,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       style: const TextStyle(color: Colors.black, fontSize: 16),
       underline: Container(
         height: 2,
-        color: Color.fromARGB(255, 228, 42, 76),
+        color: const Color.fromARGB(255, 228, 42, 76),
       ),
       onChanged: (String? newValue) {
         setState(() {

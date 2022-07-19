@@ -12,14 +12,14 @@ class med extends StatefulWidget {
 class _medState extends State<med> {
   @override
   Widget build(BuildContext context) {
-    var primaryColor = Color.fromARGB(255, 228, 42, 76);
-    var primaryColor2 = Color(0xFFEDEDED);
-    var primaryColor3 = Color(0xFFFFDBDB);
-    var primaryColor4 = Color(0xFFEDE8E8);
+    var primaryColor = const Color.fromARGB(255, 228, 42, 76);
+    var primaryColor2 = const Color(0xFFEDEDED);
+    var primaryColor3 = const Color(0xFFFFDBDB);
+    var primaryColor4 = const Color(0xFFEDE8E8);
     int selected = -1;
 
     return Scaffold(
-        backgroundColor: Color(0xFFFFDBDB),
+        backgroundColor: const Color(0xFFFFDBDB),
         appBar: AppBar(
           toolbarHeight: 100,
           elevation: 0.0,
@@ -33,7 +33,7 @@ class _medState extends State<med> {
                     top: 25.0,
                   ),
                   child: IconButton(
-                    icon: Icon(Icons.arrow_back, color: Colors.black),
+                    icon: const Icon(Icons.arrow_back, color: Colors.black),
                     onPressed: () => Navigator.of(context).pop(),
                   ),
                 ),
@@ -41,7 +41,7 @@ class _medState extends State<med> {
                   padding:
                       const EdgeInsets.only(left: 30, top: 25.0, right: 40),
                   child: Center(
-                    child: new Image.asset(
+                    child: Image.asset(
                       'images/man.png',
                       width: 40.0,
                       height: 40.0,
@@ -51,7 +51,7 @@ class _medState extends State<med> {
                 Padding(
                   padding: const EdgeInsets.only(left: 0, top: 25.0, right: 30),
                   child: RichText(
-                    text: TextSpan(
+                    text: const TextSpan(
                       text: 'Medicine',
                       style: TextStyle(
                         fontSize: 25,
@@ -69,25 +69,25 @@ class _medState extends State<med> {
         body: Container(
           height: 560,
           width: 420,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Color(0xFFEDE8E8),
-            borderRadius: new BorderRadius.only(
-              topLeft: const Radius.circular(30.0),
-              topRight: const Radius.circular(30.0),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30.0),
+              topRight: Radius.circular(30.0),
             ),
           ),
           child: Padding(
               padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(left: 25, bottom: 30),
-                        child: new Image.asset(
+                        child: Image.asset(
                           'images/check.png',
                           width: 15.0,
                           height: 15.0,
@@ -99,7 +99,7 @@ class _medState extends State<med> {
                           bottom: 30,
                         ),
                         child: RichText(
-                          text: TextSpan(
+                          text: const TextSpan(
                             text: 'You are monitoring of ',
                             style: TextStyle(
                               fontSize: 16,
@@ -107,7 +107,7 @@ class _medState extends State<med> {
                               color: Colors.black,
                               fontFamily: 'Montserrat',
                             ),
-                            children: const <TextSpan>[
+                            children: <TextSpan>[
                               TextSpan(
                                   text: 'Dr.Ahmed',
                                   style: TextStyle(
@@ -122,7 +122,7 @@ class _medState extends State<med> {
                       ),
                     ],
                   ),
-                  Text(
+                  const Text(
                     'Shape and color',
                     style: TextStyle(
                       fontSize: 16,
@@ -160,9 +160,9 @@ class _medState extends State<med> {
                           padding: const EdgeInsets.only(
                             right: 10,
                           ),
-                          child: Container(
+                          child: SizedBox(
                             width: 30.0,
-                            child: new Image.asset(
+                            child: Image.asset(
                               'images/pill.png',
                               width: 1.0,
                               height: 1.0,
@@ -171,9 +171,9 @@ class _medState extends State<med> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 10),
-                          child: Container(
+                          child: SizedBox(
                             width: 30.0,
-                            child: new Image.asset(
+                            child: Image.asset(
                               'images/pill.png',
                               width: 1.0,
                               height: 1.0,
@@ -182,9 +182,9 @@ class _medState extends State<med> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 10),
-                          child: Container(
+                          child: SizedBox(
                             width: 30.0,
-                            child: new Image.asset(
+                            child: Image.asset(
                               'images/pill.png',
                               width: 1.0,
                               height: 1.0,
@@ -193,9 +193,9 @@ class _medState extends State<med> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 10),
-                          child: Container(
+                          child: SizedBox(
                             width: 30.0,
-                            child: new Image.asset(
+                            child: Image.asset(
                               'images/pill.png',
                               width: 1.0,
                               height: 1.0,
@@ -204,9 +204,9 @@ class _medState extends State<med> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 10),
-                          child: Container(
+                          child: SizedBox(
                             width: 30.0,
-                            child: new Image.asset(
+                            child: Image.asset(
                               'images/pill.png',
                               width: 1.0,
                               height: 1.0,
@@ -215,9 +215,9 @@ class _medState extends State<med> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 10),
-                          child: Container(
+                          child: SizedBox(
                             width: 30.0,
-                            child: new Image.asset(
+                            child: Image.asset(
                               'images/pill.png',
                               width: 1.0,
                               height: 1.0,
@@ -226,9 +226,9 @@ class _medState extends State<med> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 10),
-                          child: Container(
+                          child: SizedBox(
                             width: 30.0,
-                            child: new Image.asset(
+                            child: Image.asset(
                               'images/pill.png',
                               width: 1.0,
                               height: 1.0,
@@ -237,9 +237,9 @@ class _medState extends State<med> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 10),
-                          child: Container(
+                          child: SizedBox(
                             width: 30.0,
-                            child: new Image.asset(
+                            child: Image.asset(
                               'images/pill.png',
                               width: 1.0,
                               height: 1.0,
@@ -248,9 +248,9 @@ class _medState extends State<med> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 10),
-                          child: Container(
+                          child: SizedBox(
                             width: 30.0,
-                            child: new Image.asset(
+                            child: Image.asset(
                               'images/pill.png',
                               width: 1.0,
                               height: 1.0,
@@ -259,9 +259,9 @@ class _medState extends State<med> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 10),
-                          child: Container(
+                          child: SizedBox(
                             width: 30.0,
-                            child: new Image.asset(
+                            child: Image.asset(
                               'images/pill.png',
                               width: 1.0,
                               height: 1.0,
@@ -270,9 +270,9 @@ class _medState extends State<med> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 10),
-                          child: Container(
+                          child: SizedBox(
                             width: 30.0,
-                            child: new Image.asset(
+                            child: Image.asset(
                               'images/pill.png',
                               width: 1.0,
                               height: 1.0,
@@ -281,9 +281,9 @@ class _medState extends State<med> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 10),
-                          child: Container(
+                          child: SizedBox(
                             width: 30.0,
-                            child: new Image.asset(
+                            child: Image.asset(
                               'images/pill.png',
                               width: 1.0,
                               height: 1.0,
@@ -292,9 +292,9 @@ class _medState extends State<med> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 10),
-                          child: Container(
+                          child: SizedBox(
                             width: 30.0,
-                            child: new Image.asset(
+                            child: Image.asset(
                               'images/pill.png',
                               width: 1.0,
                               height: 1.0,
@@ -303,9 +303,9 @@ class _medState extends State<med> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 10),
-                          child: Container(
+                          child: SizedBox(
                             width: 30.0,
-                            child: new Image.asset(
+                            child: Image.asset(
                               'images/pill.png',
                               width: 1.0,
                               height: 1.0,
@@ -314,9 +314,9 @@ class _medState extends State<med> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 10),
-                          child: Container(
+                          child: SizedBox(
                             width: 30.0,
-                            child: new Image.asset(
+                            child: Image.asset(
                               'images/pill.png',
                               width: 1.0,
                               height: 1.0,
@@ -325,9 +325,9 @@ class _medState extends State<med> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 10),
-                          child: Container(
+                          child: SizedBox(
                             width: 30.0,
-                            child: new Image.asset(
+                            child: Image.asset(
                               'images/pill.png',
                               width: 1.0,
                               height: 1.0,
@@ -344,8 +344,8 @@ class _medState extends State<med> {
         floatingActionButton: Padding(
           padding: const EdgeInsets.only(bottom: 50),
           child: FloatingActionButton(
-              child: Icon(Icons.add),
-              backgroundColor: Color.fromARGB(255, 228, 42, 76),
+              child: const Icon(Icons.add),
+              backgroundColor: const Color.fromARGB(255, 228, 42, 76),
               onPressed: () {}),
         ),
 

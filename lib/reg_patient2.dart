@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 class SignUP_patient2 extends StatefulWidget {
@@ -9,8 +8,8 @@ class SignUP_patient2 extends StatefulWidget {
 }
 
 class _SignUP_patient2State extends State<SignUP_patient2> {
-  var primaryColor = Color(0xFFE42A4C);
-  var primaryColor2 = Color(0xFFEDEDED);
+  var primaryColor = const Color(0xFFE42A4C);
+  var primaryColor2 = const Color(0xFFEDEDED);
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
   bool value = false;
@@ -101,7 +100,7 @@ class _SignUP_patient2State extends State<SignUP_patient2> {
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
                       hintText: 'Tap,  & Enter Email Address',
-                      hintStyle: TextStyle(fontSize: 16),
+                      hintStyle: const TextStyle(fontSize: 16),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: const BorderSide(
@@ -110,7 +109,7 @@ class _SignUP_patient2State extends State<SignUP_patient2> {
                         ),
                       ),
                       filled: true,
-                      contentPadding: EdgeInsets.all(16),
+                      contentPadding: const EdgeInsets.all(16),
                     ),
                   ),
                 ),
@@ -159,7 +158,7 @@ class _SignUP_patient2State extends State<SignUP_patient2> {
                         Icons.remove_red_eye,
                         color: Colors.pink.withOpacity(.5),
                       ),
-                      hintStyle: TextStyle(fontSize: 16),
+                      hintStyle: const TextStyle(fontSize: 16),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: const BorderSide(
@@ -168,7 +167,7 @@ class _SignUP_patient2State extends State<SignUP_patient2> {
                         ),
                       ),
                       filled: true,
-                      contentPadding: EdgeInsets.all(16),
+                      contentPadding: const EdgeInsets.all(16),
                     ),
                   ),
                 ),
@@ -217,7 +216,7 @@ class _SignUP_patient2State extends State<SignUP_patient2> {
                         Icons.remove_red_eye,
                         color: Colors.pink.withOpacity(.5),
                       ),
-                      hintStyle: TextStyle(fontSize: 16),
+                      hintStyle: const TextStyle(fontSize: 16),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: const BorderSide(
@@ -226,7 +225,7 @@ class _SignUP_patient2State extends State<SignUP_patient2> {
                         ),
                       ),
                       filled: true,
-                      contentPadding: EdgeInsets.all(16),
+                      contentPadding: const EdgeInsets.all(16),
                     ),
                   ),
                 ),
@@ -234,7 +233,7 @@ class _SignUP_patient2State extends State<SignUP_patient2> {
               Row(
                 children: [
 
-                  Text(
+                  const Text(
                     ' I agree that I have read and accepted the',
                     style: TextStyle(
                       fontSize: 12,
@@ -242,7 +241,7 @@ class _SignUP_patient2State extends State<SignUP_patient2> {
                     ),
                   ),
                   TextButton(
-                    child: Text( 'Terms of Use',
+                    child: const Text( 'Terms of Use',
                       style: TextStyle(
                         fontSize: 12,
                         color: Colors.pink,

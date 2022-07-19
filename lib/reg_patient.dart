@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class SignUP_patient extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var primaryColor = Color.fromARGB(255, 228, 42, 76);
-    var primaryColor2 = Color(0xFFEDEDED);
+    var primaryColor = const Color.fromARGB(255, 228, 42, 76);
+    var primaryColor2 = const Color(0xFFEDEDED);
     var nameController = TextEditingController();
     var ageController = TextEditingController();
     var numController = TextEditingController();
@@ -43,7 +43,7 @@ class SignUP_patient extends StatelessWidget {
           ),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
@@ -84,7 +84,7 @@ class SignUP_patient extends StatelessWidget {
                   keyboardType: TextInputType.name,
                   decoration: InputDecoration(
                     hintText: 'Tap,  & Enter name',
-                    hintStyle: TextStyle(fontSize: 16),
+                    hintStyle: const TextStyle(fontSize: 16),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                       borderSide: const BorderSide(
@@ -94,7 +94,7 @@ class SignUP_patient extends StatelessWidget {
                       ),
                     ),
                     filled: true,
-                    contentPadding: EdgeInsets.all(16),
+                    contentPadding: const EdgeInsets.all(16),
                   ),
                 ),
               ),
@@ -132,17 +132,17 @@ class SignUP_patient extends StatelessWidget {
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.all(12),
-                    child: Container(
+                    child: SizedBox(
                       height: 50,
                       child: ChoiceChip(
-                        labelPadding: EdgeInsets.all(10),
-                        labelStyle: TextStyle(color: Colors.white),
-                        avatar: Icon(Icons.male,size: 32,color: Colors.white,),
+                        labelPadding: const EdgeInsets.all(10),
+                        labelStyle: const TextStyle(color: Colors.white),
+                        avatar: const Icon(Icons.male,size: 32,color: Colors.white,),
                         backgroundColor: Colors.white,
                         selectedColor: primaryColor,
-                        label: Text("    Male     "),
+                        label: const Text("    Male     "),
                         selected: true,
-                        shadowColor: Color.fromARGB(255, 228, 42, 76),
+                        shadowColor: const Color.fromARGB(255, 228, 42, 76),
                         shape: RoundedRectangleBorder(
                             side: const BorderSide(
                                 color: Color.fromARGB(255, 228, 42, 76),
@@ -164,17 +164,17 @@ class SignUP_patient extends StatelessWidget {
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.all(12),
-                    child: Container(
+                    child: SizedBox(
                       height: 50,
                       child: ChoiceChip(
-                        labelPadding: EdgeInsets.all(10),
-                        labelStyle: TextStyle(color: Colors.black45),
-                        avatar: Icon(Icons.female,size: 32,color: Colors.black45,),
+                        labelPadding: const EdgeInsets.all(10),
+                        labelStyle: const TextStyle(color: Colors.black45),
+                        avatar: const Icon(Icons.female,size: 32,color: Colors.black45,),
                        // backgroundColor: Colors.black12,
                         selectedColor: primaryColor,
-                        label: Text(" Female  "),
+                        label: const Text(" Female  "),
                         selected: false,
-                        shadowColor: Color.fromARGB(255, 228, 42, 76),
+                        shadowColor: const Color.fromARGB(255, 228, 42, 76),
                         shape: RoundedRectangleBorder(
                             side: const BorderSide(
                                 color: Color.fromARGB(255, 228, 42, 76),
@@ -196,7 +196,7 @@ class SignUP_patient extends StatelessWidget {
             Row(
               children: const [
                 Padding(
-                  padding: const EdgeInsetsDirectional.only(start: 15),
+                  padding: EdgeInsetsDirectional.only(start: 15),
                   child:
                   Text(
                     ' Date of birth',
@@ -226,7 +226,7 @@ class SignUP_patient extends StatelessWidget {
                       keyboardType: TextInputType.text,
                       decoration: InputDecoration(
                         hintText: '1995',
-                        hintStyle: TextStyle(fontSize: 16),
+                        hintStyle: const TextStyle(fontSize: 16),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                           borderSide: const BorderSide(
@@ -235,7 +235,7 @@ class SignUP_patient extends StatelessWidget {
                           ),
                         ),
                         filled: false,
-                        contentPadding: EdgeInsets.all(12),
+                        contentPadding: const EdgeInsets.all(12),
                         isDense: true,
                       ),
                     ),
@@ -252,7 +252,7 @@ class SignUP_patient extends StatelessWidget {
                       keyboardType: TextInputType.text,
                       decoration: InputDecoration(
                         hintText: '05',
-                        hintStyle: TextStyle(fontSize: 16),
+                        hintStyle: const TextStyle(fontSize: 16),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                           borderSide: const BorderSide(
@@ -261,7 +261,7 @@ class SignUP_patient extends StatelessWidget {
                           ),
                         ),
                         filled: false,
-                        contentPadding: EdgeInsets.all(12),
+                        contentPadding: const EdgeInsets.all(12),
                         isDense: true,
                       ),
                     ),
@@ -278,7 +278,7 @@ class SignUP_patient extends StatelessWidget {
                       keyboardType: TextInputType.text,
                       decoration: InputDecoration(
                         hintText: '15',
-                        hintStyle: TextStyle(fontSize: 16),
+                        hintStyle: const TextStyle(fontSize: 16),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                           borderSide: const BorderSide(
@@ -287,7 +287,7 @@ class SignUP_patient extends StatelessWidget {
                           ),
                         ),
                         filled: false,
-                        contentPadding: EdgeInsets.all(12),
+                        contentPadding: const EdgeInsets.all(12),
                         isDense: true,
                       ),
                     ),
@@ -359,7 +359,7 @@ class SignUP_patient extends StatelessWidget {
                     keyboardType: TextInputType.text,
                     decoration: InputDecoration(
                       hintText: '150',
-                      hintStyle: TextStyle(fontSize: 16),
+                      hintStyle: const TextStyle(fontSize: 16),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: const BorderSide(
@@ -368,7 +368,7 @@ class SignUP_patient extends StatelessWidget {
                         ),
                       ),
                       filled: false,
-                      contentPadding: EdgeInsets.all(12),
+                      contentPadding: const EdgeInsets.all(12),
                       isDense: true,
                     ),
                   ),
@@ -385,7 +385,7 @@ class SignUP_patient extends StatelessWidget {
                     keyboardType: TextInputType.text,
                     decoration: InputDecoration(
                       hintText: '58',
-                      hintStyle: TextStyle(fontSize: 16),
+                      hintStyle: const TextStyle(fontSize: 16),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: const BorderSide(
@@ -394,7 +394,7 @@ class SignUP_patient extends StatelessWidget {
                         ),
                       ),
                       filled: false,
-                      contentPadding: EdgeInsets.all(12),
+                      contentPadding: const EdgeInsets.all(12),
                       isDense: true,
                     ),
                   ),
@@ -437,7 +437,7 @@ class SignUP_patient extends StatelessWidget {
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   hintText: 'eg. 01023837647',
-                  hintStyle: TextStyle(fontSize: 16),
+                  hintStyle: const TextStyle(fontSize: 16),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                     borderSide: const BorderSide(
@@ -447,12 +447,12 @@ class SignUP_patient extends StatelessWidget {
                     ),
                   ),
                   filled: true,
-                  contentPadding: EdgeInsets.all(16),
+                  contentPadding: const EdgeInsets.all(16),
                   isDense: true,
                 ),
               ),
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -526,7 +526,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       style: const TextStyle(color: Colors.black, fontSize: 16),
       underline: Container(
         height: 2,
-        color: Color.fromARGB(255, 228, 42, 76),
+        color: const Color.fromARGB(255, 228, 42, 76),
       ),
       onChanged: (String? newValue) {
         setState(() {

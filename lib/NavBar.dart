@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class NavBar extends StatelessWidget {
@@ -10,10 +9,10 @@ class NavBar extends StatelessWidget {
         children: [
           Container(
             child: UserAccountsDrawerHeader(
-              accountName: Text('Mohamed Shebl',style: TextStyle(
+              accountName: const Text('Mohamed Shebl',style: TextStyle(
                 fontSize: 20,
               ),),
-              accountEmail: Text('Mohamed@gmail.com'),
+              accountEmail: const Text('Mohamed@gmail.com'),
               currentAccountPicture: CircleAvatar(
                 backgroundColor: Colors.white,
                 child: ClipOval(
@@ -23,7 +22,7 @@ class NavBar extends StatelessWidget {
                   ),
                 ),
               ),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                  // borderRadius: BorderRadius.circular(10.0),
                   image: DecorationImage(
                 image: AssetImage(
@@ -34,20 +33,20 @@ class NavBar extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: Icon(Icons.account_circle_rounded),
-            title: Text('Account'),
+            leading: const Icon(Icons.account_circle_rounded),
+            title: const Text('Account'),
             onTap: () => null,
           ),
           ListTile(
-            leading: Icon(Icons.notifications),
-            title: Text('Notifications'),
+            leading: const Icon(Icons.notifications),
+            title: const Text('Notifications'),
             onTap: () => null,
             trailing: ClipOval(
               child: Container(
                 color: Colors.red,
                 width: 20,
                 height: 20,
-                child: Center(
+                child: const Center(
                   child: Text(
                     '3', style: TextStyle(
                     color: Colors.white ,
@@ -59,30 +58,30 @@ class NavBar extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: Icon(Icons.person_add),
-            title: Text('Invite Code'),
+            leading: const Icon(Icons.person_add),
+            title: const Text('Invite Code'),
             onTap: () => null,
           ),
           ListTile(
-            leading: Icon(Icons.people_sharp),
-            title: Text('Invite Medfriend'),
+            leading: const Icon(Icons.people_sharp),
+            title: const Text('Invite Medfriend'),
             onTap: () => null,
           ),
           ListTile(
-            leading: Icon(Icons.link),
-            title: Text('Connect to Tutum Watch'),
+            leading: const Icon(Icons.link),
+            title: const Text('Connect to Tutum Watch'),
             onTap: () => null,
           ),
-          Divider(
+          const Divider(
           ),
           ListTile(
-            leading: Icon(Icons.settings),
-            title: Text('Settings'),
+            leading: const Icon(Icons.settings),
+            title: const Text('Settings'),
             onTap: () => null,
           ),
           ListTile(
-            leading: Icon(Icons.exit_to_app),
-            title: Text('Exit'),
+            leading: const Icon(Icons.exit_to_app),
+            title: const Text('Exit'),
             onTap: () => null,
           ),
         ],

@@ -7,8 +7,8 @@ void main() {
 class myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var primaryColor = Color.fromARGB(255, 228, 42, 76);
-    var primaryColor2 = Color(0xFFEDEDED);
+    var primaryColor = const Color.fromARGB(255, 228, 42, 76);
+    var primaryColor2 = const Color(0xFFEDEDED);
     var nameController = TextEditingController();
     var ageController = TextEditingController();
 
@@ -24,7 +24,7 @@ class myapp extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(top: 20.0),
               child: RichText(
-                text: TextSpan(
+                text: const TextSpan(
                   text: 'Sign up - ',
                   style: TextStyle(
                     fontSize: 20,
@@ -32,7 +32,7 @@ class myapp extends StatelessWidget {
                     color: Colors.black,
                     fontFamily: 'Montserrat',
                   ),
-                  children: const <TextSpan>[
+                  children: <TextSpan>[
                     TextSpan(
                         text: ' Doctor',
                         style: TextStyle(
@@ -47,7 +47,7 @@ class myapp extends StatelessWidget {
             ),
           ),
           leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: Colors.black),
+            icon: const Icon(Icons.arrow_back, color: Colors.black),
             onPressed: () => Navigator.of(context).pop(),
           ),
         ),
@@ -59,9 +59,9 @@ class myapp extends StatelessWidget {
                 height: 20,
               ),
               Row(
-                children: [
+                children: const [
                   Padding(
-                    padding: const EdgeInsets.only(left: 8),
+                    padding: EdgeInsets.only(left: 8),
                     child: Text(
                       ' Enter your name',
                       style: TextStyle(
@@ -88,7 +88,7 @@ class myapp extends StatelessWidget {
                     keyboardType: TextInputType.name,
                     decoration: InputDecoration(
                       hintText: 'Dr.Ahmed',
-                      hintStyle: TextStyle(fontSize: 16),
+                      hintStyle: const TextStyle(fontSize: 16),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: const BorderSide(
@@ -97,7 +97,7 @@ class myapp extends StatelessWidget {
                         ),
                       ),
                       filled: false,
-                      contentPadding: EdgeInsets.all(16),
+                      contentPadding: const EdgeInsets.all(16),
                     ),
                   ),
                 ),
@@ -106,9 +106,9 @@ class myapp extends StatelessWidget {
                 height: 7,
               ),
               Row(
-                children: [
+                children: const [
                   Padding(
-                    padding: const EdgeInsets.only(left: 16),
+                    padding: EdgeInsets.only(left: 16),
                     child: Text(
                       ' Age',
                       style: TextStyle(
@@ -120,7 +120,7 @@ class myapp extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 165),
+                    padding: EdgeInsets.only(left: 165),
                     child: Text(
                       ' Gender',
                       style: TextStyle(
@@ -148,7 +148,7 @@ class myapp extends StatelessWidget {
                           keyboardType: TextInputType.text,
                           decoration: InputDecoration(
                             hintText: '41',
-                            hintStyle: TextStyle(fontSize: 16),
+                            hintStyle: const TextStyle(fontSize: 16),
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
                               borderSide: const BorderSide(
@@ -168,10 +168,10 @@ class myapp extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(0, 5, 0, 30),
                       child: Container(
                         child: ChoiceChip(
-                          label: Text("      Male      "),
+                          label: const Text("      Male      "),
                           selected: false,
                           shape: RoundedRectangleBorder(
-                              side: BorderSide(
+                              side: const BorderSide(
                                   color: Color.fromARGB(255, 228, 42, 76),
                                   width: 1),
                               borderRadius: BorderRadius.circular(10.0)),
@@ -188,12 +188,12 @@ class myapp extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(0, 5, 0, 30),
                       child: Container(
                         child: ChoiceChip(
-                          label: Text("   female   "),
+                          label: const Text("   female   "),
                           selected: false,
                           backgroundColor: Colors.white,
-                          shadowColor: Color.fromARGB(255, 228, 42, 76),
+                          shadowColor: const Color.fromARGB(255, 228, 42, 76),
                           shape: RoundedRectangleBorder(
-                              side: BorderSide(
+                              side: const BorderSide(
                                   color: Color.fromARGB(255, 228, 42, 76),
                                   width: 1),
                               borderRadius: BorderRadius.circular(10.0)),
@@ -208,9 +208,9 @@ class myapp extends StatelessWidget {
                 ],
               ),
               Row(
-                children: [
+                children: const [
                   Padding(
-                    padding: const EdgeInsets.only(left: 15),
+                    padding: EdgeInsets.only(left: 15),
                     child: Text(
                       ' Phone number ',
                       style: TextStyle(
@@ -237,7 +237,7 @@ class myapp extends StatelessWidget {
                     keyboardType: TextInputType.name,
                     decoration: InputDecoration(
                       hintText: 'Phone number',
-                      hintStyle: TextStyle(fontSize: 16),
+                      hintStyle: const TextStyle(fontSize: 16),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: const BorderSide(
@@ -246,15 +246,15 @@ class myapp extends StatelessWidget {
                         ),
                       ),
                       filled: false,
-                      contentPadding: EdgeInsets.all(16),
+                      contentPadding: const EdgeInsets.all(16),
                     ),
                   ),
                 ),
               ),
               Row(
-                children: [
+                children: const [
                   Padding(
-                    padding: const EdgeInsets.only(left: 15),
+                    padding: EdgeInsets.only(left: 15),
                     child: Text(
                       ' Specialization ',
                       style: TextStyle(
@@ -278,7 +278,7 @@ class myapp extends StatelessWidget {
                     keyboardType: TextInputType.name,
                     decoration: InputDecoration(
                       hintText: 'Specialization',
-                      hintStyle: TextStyle(fontSize: 16),
+                      hintStyle: const TextStyle(fontSize: 16),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: const BorderSide(
@@ -287,15 +287,15 @@ class myapp extends StatelessWidget {
                         ),
                       ),
                       filled: false,
-                      contentPadding: EdgeInsets.all(16),
+                      contentPadding: const EdgeInsets.all(16),
                     ),
                   ),
                 ),
               ),
               Row(
-                children: [
+                children: const [
                   Padding(
-                    padding: const EdgeInsets.only(left: 15),
+                    padding: EdgeInsets.only(left: 15),
                     child: Text(
                       ' Clinic address ',
                       style: TextStyle(
@@ -319,7 +319,7 @@ class myapp extends StatelessWidget {
                     keyboardType: TextInputType.name,
                     decoration: InputDecoration(
                       hintText: 'Clinic address',
-                      hintStyle: TextStyle(fontSize: 16),
+                      hintStyle: const TextStyle(fontSize: 16),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: const BorderSide(
@@ -328,7 +328,7 @@ class myapp extends StatelessWidget {
                         ),
                       ),
                       filled: false,
-                      contentPadding: EdgeInsets.all(16),
+                      contentPadding: const EdgeInsets.all(16),
                     ),
                   ),
                 ),
@@ -342,7 +342,7 @@ class myapp extends StatelessWidget {
                   // color: primaryColor2,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Color.fromARGB(255, 228, 42, 76),
+                      primary: const Color.fromARGB(255, 228, 42, 76),
                       minimumSize: const Size.fromHeight(50), // NEW
                     ),
                     onPressed: () {},
@@ -354,7 +354,7 @@ class myapp extends StatelessWidget {
                 ),
               ),
               RichText(
-                text: TextSpan(
+                text: const TextSpan(
                   text: 'Already have an account?',
                   style: TextStyle(
                     fontSize: 16,
@@ -362,7 +362,7 @@ class myapp extends StatelessWidget {
                     color: Colors.black,
                     fontFamily: 'Montserrat',
                   ),
-                  children: const <TextSpan>[
+                  children: <TextSpan>[
                     TextSpan(
                         text: 'Sign in',
                         style: TextStyle(

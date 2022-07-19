@@ -9,17 +9,17 @@ class updates extends StatefulWidget {
 }
 
 class _updatesState extends State<updates> {
-  var primaryColor = Color.fromARGB(255, 228, 42, 76);
-  var primaryColor2 = Color(0xFFEDEDED);
-  var primaryColor3 = Color(0xFFFFDBDB);
-  var primaryColor4 = Color(0xFFEDE8E8);
+  var primaryColor = const Color.fromARGB(255, 228, 42, 76);
+  var primaryColor2 = const Color(0xFFEDEDED);
+  var primaryColor3 = const Color(0xFFFFDBDB);
+  var primaryColor4 = const Color(0xFFEDE8E8);
 
   var oxController = TextEditingController();
   var ageController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFFDBDB),
+      backgroundColor: const Color(0xFFFFDBDB),
       appBar: AppBar(
         toolbarHeight: 100,
         elevation: 0.0,
@@ -31,7 +31,7 @@ class _updatesState extends State<updates> {
               Padding(
                 padding: const EdgeInsets.only(left: 50, top: 25.0, right: 30),
                 child: Center(
-                  child: new Image.asset(
+                  child: Image.asset(
                     'images/man.png',
                     width: 40.0,
                     height: 40.0,
@@ -41,7 +41,7 @@ class _updatesState extends State<updates> {
               Padding(
                 padding: const EdgeInsets.only(left: 35, top: 25.0, right: 0),
                 child: RichText(
-                  text: TextSpan(
+                  text: const TextSpan(
                     text: 'Updates',
                     style: TextStyle(
                       fontSize: 25,
@@ -61,23 +61,23 @@ class _updatesState extends State<updates> {
         child: Container(
           height: 570,
           width: 420,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Color(0xFFEDE8E8),
-            borderRadius: new BorderRadius.only(
-              topLeft: const Radius.circular(30.0),
-              topRight: const Radius.circular(30.0),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30.0),
+              topRight: Radius.circular(30.0),
             ),
           ),
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(children: [
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Container(
                 height: 90,
                 width: 370,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Color.fromARGB(255, 228, 42, 76),
                   borderRadius: BorderRadius.all(Radius.circular(30)),
                 ),
@@ -91,7 +91,7 @@ class _updatesState extends State<updates> {
                               padding: const EdgeInsets.only(
                                   left: 100, top: 5, right: 30, bottom: 20),
                               child: Center(
-                                child: new Image.asset(
+                                child: Image.asset(
                                   'images/man.png',
                                   width: 30.0,
                                   height: 30.0,
@@ -104,7 +104,7 @@ class _updatesState extends State<updates> {
                               padding: const EdgeInsets.only(
                                   left: 0, top: 5, right: 100, bottom: 15),
                               child: RichText(
-                                text: TextSpan(
+                                text: const TextSpan(
                                   text: 'Doctor, Omar',
                                   style: TextStyle(
                                     fontSize: 15,
@@ -119,7 +119,7 @@ class _updatesState extends State<updates> {
                         ],
                       ),
                     ),
-                    Text(
+                    const Text(
                       'Added a new midicine',
                       style: TextStyle(
                         decoration: TextDecoration.underline,
@@ -132,13 +132,13 @@ class _updatesState extends State<updates> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
                 height: 90,
                 width: 370,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Color.fromARGB(255, 228, 42, 76),
                   borderRadius: BorderRadius.all(Radius.circular(30)),
                 ),
@@ -152,7 +152,7 @@ class _updatesState extends State<updates> {
                               padding: const EdgeInsets.only(
                                   left: 100, top: 5, right: 30, bottom: 20),
                               child: Center(
-                                child: new Image.asset(
+                                child: Image.asset(
                                   'images/man.png',
                                   width: 30.0,
                                   height: 30.0,
@@ -165,7 +165,7 @@ class _updatesState extends State<updates> {
                               padding: const EdgeInsets.only(
                                   left: 0, top: 5, right: 100, bottom: 20),
                               child: RichText(
-                                text: TextSpan(
+                                text: const TextSpan(
                                   text: 'Doctor, Ali',
                                   style: TextStyle(
                                     fontSize: 15,
@@ -180,7 +180,7 @@ class _updatesState extends State<updates> {
                         ],
                       ),
                     ),
-                    Text(
+                    const Text(
                       'Added a new midicine',
                       style: TextStyle(
                         decoration: TextDecoration.underline,
@@ -193,13 +193,13 @@ class _updatesState extends State<updates> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
                 height: 90,
                 width: 370,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Color.fromARGB(255, 228, 42, 76),
                   borderRadius: BorderRadius.all(Radius.circular(30)),
                 ),
@@ -213,7 +213,7 @@ class _updatesState extends State<updates> {
                               padding: const EdgeInsets.only(
                                   left: 100, top: 5, right: 30, bottom: 20),
                               child: Center(
-                                child: new Image.asset(
+                                child: Image.asset(
                                   'images/man.png',
                                   width: 30.0,
                                   height: 30.0,
@@ -226,7 +226,7 @@ class _updatesState extends State<updates> {
                               padding: const EdgeInsets.only(
                                   left: 0, top: 5, right: 100, bottom: 20),
                               child: RichText(
-                                text: TextSpan(
+                                text: const TextSpan(
                                   text: 'Doctor, Omar',
                                   style: TextStyle(
                                     fontSize: 15,
@@ -241,7 +241,7 @@ class _updatesState extends State<updates> {
                         ],
                       ),
                     ),
-                    Text(
+                    const Text(
                       'Added a new midicine',
                       style: TextStyle(
                         decoration: TextDecoration.underline,
@@ -254,13 +254,13 @@ class _updatesState extends State<updates> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
                 height: 90,
                 width: 370,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Color.fromARGB(255, 228, 42, 76),
                   borderRadius: BorderRadius.all(Radius.circular(30)),
                 ),
@@ -274,7 +274,7 @@ class _updatesState extends State<updates> {
                               padding: const EdgeInsets.only(
                                   left: 100, top: 5, right: 30, bottom: 20),
                               child: Center(
-                                child: new Image.asset(
+                                child: Image.asset(
                                   'images/man.png',
                                   width: 30.0,
                                   height: 30.0,
@@ -287,7 +287,7 @@ class _updatesState extends State<updates> {
                               padding: const EdgeInsets.only(
                                   left: 0, top: 5, right: 100, bottom: 20),
                               child: RichText(
-                                text: TextSpan(
+                                text: const TextSpan(
                                   text: 'Doctor, Omar',
                                   style: TextStyle(
                                     fontSize: 15,
@@ -302,7 +302,7 @@ class _updatesState extends State<updates> {
                         ],
                       ),
                     ),
-                    Text(
+                    const Text(
                       'Added a new midicine',
                       style: TextStyle(
                         decoration: TextDecoration.underline,

@@ -44,9 +44,9 @@ class docList extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    var primaryColor = Color.fromARGB(255, 228, 42, 76);
-    var primaryColor2 = Color(0xFFFFDBDB);
-    var primaryColor3 = Color(0xFFEDE8E8);
+    var primaryColor = const Color.fromARGB(255, 228, 42, 76);
+    var primaryColor2 = const Color(0xFFFFDBDB);
+    var primaryColor3 = const Color(0xFFEDE8E8);
     var nameController = TextEditingController();
     var ageController = TextEditingController();
     int _value = 1;
@@ -84,7 +84,7 @@ class docList extends StatelessWidget {
       body: ListView.separated(
         itemBuilder: (context, index) => buildUserItem(user[index]),
         separatorBuilder: (context, index) => Padding(
-          padding: EdgeInsetsDirectional.only(start: 20),
+          padding: const EdgeInsetsDirectional.only(start: 20),
           child: Container(
             width: double.infinity,
             height: 1.0,
@@ -98,7 +98,7 @@ class docList extends StatelessWidget {
   }
 
   Widget buildUserItem(UserModel user) => Padding(
-        padding: EdgeInsets.all(22.0),
+        padding: const EdgeInsets.all(22.0),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -114,17 +114,17 @@ class docList extends StatelessWidget {
                         backgroundColor: Colors.pink,
                         child: Text('${user.id}'),
                       ),
-                      CircleAvatar(
+                      const CircleAvatar(
                         radius: 7,
                         backgroundColor: Color(0xFFFFDBDB),
                       ),
-                      CircleAvatar(
+                      const CircleAvatar(
                         radius: 6,
                         backgroundColor: Colors.green,
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 15,
                   ),
                   Column(
@@ -132,7 +132,7 @@ class docList extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          Text(
+                          const Text(
                             'Dr. ',
                             style: TextStyle(
                               fontSize: 19,
@@ -140,8 +140,8 @@ class docList extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            '${user.Doc_name}',
-                            style: TextStyle(
+                            user.Doc_name,
+                            style: const TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w600,
                             ),
@@ -149,10 +149,10 @@ class docList extends StatelessWidget {
                         ],
                       ),
                       Text(
-                        '${user.Specialization}',
+                        user.Specialization,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.black54,
                         ),
                       )

@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 class Vs_HR extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var primaryColor = Color.fromARGB(255, 228, 42, 76);
-    var primaryColor2 = Color(0xFFEDEDED);
-    var primaryColor3 = Color(0xFFFFDBDB);
+    var primaryColor = const Color.fromARGB(255, 228, 42, 76);
+    var primaryColor2 = const Color(0xFFEDEDED);
+    var primaryColor3 = const Color(0xFFFFDBDB);
     var oxController = TextEditingController();
     var ageController = TextEditingController();
 
     return Scaffold(
-        backgroundColor: Color(0xFFFFDBDB),
+        backgroundColor: const Color(0xFFFFDBDB),
         appBar: AppBar(
           elevation: 0.0,
           automaticallyImplyLeading: true,
@@ -22,7 +22,7 @@ class Vs_HR extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 70, top: 13.0, right: 30),
                 child: Center(
                   child: RichText(
-                    text: TextSpan(
+                    text: const TextSpan(
                       text: 'Heart Rate',
                       style: TextStyle(
                         fontSize: 25,
@@ -34,8 +34,8 @@ class Vs_HR extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 60, top: 13.0, right: 0),
+              const Padding(
+                padding: EdgeInsets.only(left: 60, top: 13.0, right: 0),
                 child: CircleAvatar(
                   radius: 20,
                   backgroundColor: Color(0xFFFFDBDB),
@@ -45,7 +45,7 @@ class Vs_HR extends StatelessWidget {
             ],
           ),
           leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: Colors.black),
+            icon: const Icon(Icons.arrow_back, color: Colors.black),
             onPressed: () => Navigator.of(context).pop(),
           ),
         ),
@@ -61,14 +61,14 @@ class Vs_HR extends StatelessWidget {
                 child: Container(
                   height: 350,
                   width: 400,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                   ),
                   child: Center(
                     child: Column(
                       children: [
-                        CircleAvatar(
+                        const CircleAvatar(
                           radius: 65,
                           backgroundColor: Colors.white,
                           backgroundImage: AssetImage("images/heart.png"),
@@ -77,7 +77,7 @@ class Vs_HR extends StatelessWidget {
                           height: 0,
                         ),
                         RichText(
-                            text: TextSpan(
+                            text: const TextSpan(
                           text: '86 bpm',
                           style: TextStyle(
                             fontSize: 30,
@@ -93,14 +93,14 @@ class Vs_HR extends StatelessWidget {
                           padding: const EdgeInsets.only(left: 130),
                           child: Row(
                             children: [
-                              CircleAvatar(
+                              const CircleAvatar(
                                 radius: 15,
                                 backgroundColor: Colors.white,
                                 backgroundImage:
                                     AssetImage("images/Capture.PNG"),
                               ),
                               RichText(
-                                  text: TextSpan(
+                                  text: const TextSpan(
                                 text: '5% less than',
                                 style: TextStyle(
                                   fontSize: 15,
@@ -112,18 +112,18 @@ class Vs_HR extends StatelessWidget {
                             ],
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(90)),
                           ),
                           width: 100,
                           // color: primaryColor2,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              primary: Color.fromARGB(255, 228, 42, 76),
+                              primary: const Color.fromARGB(255, 228, 42, 76),
                               minimumSize: const Size.fromHeight(30), // NEW
                             ),
                             onPressed: () {},
@@ -133,14 +133,14 @@ class Vs_HR extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 25,
                         ),
                         Row(
                           children: <Widget>[
                             Expanded(
                               child: Column(
-                                children: [
+                                children: const [
                                   Text(
                                     'Minimum',
                                     style: TextStyle(
@@ -171,7 +171,7 @@ class Vs_HR extends StatelessWidget {
                             ),
                             Expanded(
                               child: Column(
-                                children: [
+                                children: const [
                                   Text(
                                     'Maximum',
                                     style: TextStyle(
@@ -206,7 +206,7 @@ class Vs_HR extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 0, right: 245),
                 child: RichText(
-                    text: TextSpan(
+                    text: const TextSpan(
                   text: 'Performance History',
                   style: TextStyle(
                     fontSize: 15,
@@ -224,7 +224,7 @@ class Vs_HR extends StatelessWidget {
                 child: Container(
                   height: 60,
                   width: 400,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                   ),
@@ -232,13 +232,13 @@ class Vs_HR extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 20),
                     child: Row(
                       children: [
-                        CircleAvatar(
+                        const CircleAvatar(
                           radius: 20,
                           backgroundColor: Colors.grey,
                           backgroundImage: AssetImage("images/Capture.PNG"),
                         ),
                         RichText(
-                            text: TextSpan(
+                            text: const TextSpan(
                           text: '  37 °C',
                           style: TextStyle(
                             fontSize: 20,
@@ -260,7 +260,7 @@ class Vs_HR extends StatelessWidget {
                 child: Container(
                   height: 60,
                   width: 400,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                   ),
@@ -268,13 +268,13 @@ class Vs_HR extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 20),
                     child: Row(
                       children: [
-                        CircleAvatar(
+                        const CircleAvatar(
                           radius: 20,
                           backgroundColor: Colors.grey,
                           backgroundImage: AssetImage("images/Capture.PNG"),
                         ),
                         RichText(
-                            text: TextSpan(
+                            text: const TextSpan(
                           text: '  37 °C',
                           style: TextStyle(
                             fontSize: 20,

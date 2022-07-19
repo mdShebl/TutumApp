@@ -14,9 +14,9 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
   late String Gender ;
   @override
   Widget build(BuildContext context) {
-    var primaryColor = Color.fromARGB(255, 228, 42, 76);
+    var primaryColor = const Color.fromARGB(255, 228, 42, 76);
     Color colorr = Colors.grey;
-    var primaryColor2 = Color(0xFFEDEDED);
+    var primaryColor2 = const Color(0xFFEDEDED);
     var nameController = TextEditingController();
     var ageController = TextEditingController();
     var numController = TextEditingController();
@@ -37,7 +37,7 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
           child: Padding(
             padding: const EdgeInsets.only(top: 20.0),
             child: RichText(
-              text: TextSpan(
+              text: const TextSpan(
                 text: 'Sign up - ',
                 style: TextStyle(
                   fontSize: 20,
@@ -45,7 +45,7 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
                   color: Colors.black,
                   fontFamily: 'Montserrat',
                 ),
-                children: const <TextSpan>[
+                children: <TextSpan>[
                   TextSpan(
                       text: ' Doctor',
                       style: TextStyle(
@@ -60,7 +60,7 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
           ),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
@@ -72,7 +72,7 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
               padding: const EdgeInsetsDirectional.only(start: 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: [
+                children: const [
                   Icon(
                     Icons.person,
                     color: Colors.black54,
@@ -101,7 +101,7 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
                   keyboardType: TextInputType.name,
                   decoration: InputDecoration(
                     hintText: 'Tap,  & Enter name',
-                    hintStyle: TextStyle(fontSize: 16),
+                    hintStyle: const TextStyle(fontSize: 16),
                      border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                       borderSide: const BorderSide(
@@ -111,7 +111,7 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
                       ),
                     ),
                     filled: true,
-                    contentPadding: EdgeInsets.all(16),
+                    contentPadding: const EdgeInsets.all(16),
                   ),
                 ),
               ),
@@ -119,7 +119,7 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
             Padding(
               padding: const EdgeInsetsDirectional.only(start: 15),
               child: Row(
-                children: [
+                children: const [
                   Icon(Icons.date_range_rounded,
                     color: Colors.black54,
                     size: 25,
@@ -165,7 +165,7 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: [
-                  Container(
+                  SizedBox(
                     width: 95,
                     height: 47,
                     //color: primaryColor2,
@@ -177,7 +177,7 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(
                         hintText: '41',
-                        hintStyle: TextStyle(fontSize: 16),
+                        hintStyle: const TextStyle(fontSize: 16),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                           borderSide: const BorderSide(
@@ -190,10 +190,10 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
                       ),
                     ),
                   ),
-                  SizedBox(width: 13,),
+                  const SizedBox(width: 13,),
                   Expanded(
                     child: Padding(
-                      padding: EdgeInsets.only(left: 5 , right: 5),
+                      padding: const EdgeInsets.only(left: 5 , right: 5),
                       child: GestureDetector(
                         onTap: (){
 
@@ -208,7 +208,7 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
                             borderRadius: BorderRadius.circular(10.0),
                           ),
                           height: 45,
-                          padding: EdgeInsets.all(6),
+                          padding: const EdgeInsets.all(6),
                           child: Row(
                             children: [
                               Icon(Icons.male,size: 32,color: isMale ? Colors.white : Colors.black45,),
@@ -227,7 +227,7 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
 
                   Expanded(
                     child: Padding(
-                      padding: EdgeInsets.only(left: 5 , right: 5),
+                      padding: const EdgeInsets.only(left: 5 , right: 5),
                       child: GestureDetector(
                         onTap: (){
                           setState(() {
@@ -241,7 +241,7 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
                             borderRadius: BorderRadius.circular(10.0),
                           ),
                           height: 45,
-                          padding: EdgeInsets.all(6),
+                          padding: const EdgeInsets.all(6),
                              child: Row(
                                children: [
                                  Icon(Icons.female,size: 32,color: !isMale ? Colors.white : Colors.black45,),
@@ -260,7 +260,7 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
                 ],
               ),
             ),
-            SizedBox(height: 15,),
+            const SizedBox(height: 15,),
             Padding(
               padding: const EdgeInsetsDirectional.only(start: 15),
               child: Row(
@@ -292,7 +292,7 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   hintText: 'eg. 01023837647',
-                  hintStyle: TextStyle(fontSize: 16),
+                  hintStyle: const TextStyle(fontSize: 16),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                     borderSide: const BorderSide(
@@ -302,12 +302,12 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
                     ),
                   ),
                   filled: true,
-                  contentPadding: EdgeInsets.all(16),
+                  contentPadding: const EdgeInsets.all(16),
                   isDense: true,
                 ),
               ),
             ),
-            SizedBox(height: 15,),
+            const SizedBox(height: 15,),
             Padding(
               padding: const EdgeInsetsDirectional.only(start: 15),
               child: Row(
@@ -339,7 +339,7 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   hintText: 'Tap, Enter your specialty',
-                  hintStyle: TextStyle(fontSize: 16),
+                  hintStyle: const TextStyle(fontSize: 16),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                     borderSide: const BorderSide(
@@ -349,12 +349,12 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
                     ),
                   ),
                   filled: true,
-                  contentPadding: EdgeInsets.all(16),
+                  contentPadding: const EdgeInsets.all(16),
                   isDense: true,
                 ),
               ),
             ),
-            SizedBox(height: 15,),
+            const SizedBox(height: 15,),
             Padding(
               padding: const EdgeInsetsDirectional.only(start: 15),
               child: Row(
@@ -386,7 +386,7 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   hintText: 'Tap, Enter Clinic address',
-                  hintStyle: TextStyle(fontSize: 16),
+                  hintStyle: const TextStyle(fontSize: 16),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                     borderSide: const BorderSide(
@@ -396,7 +396,7 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
                     ),
                   ),
                   filled: true,
-                  contentPadding: EdgeInsets.all(16),
+                  contentPadding: const EdgeInsets.all(16),
                   isDense: true,
                 ),
               ),
@@ -441,7 +441,7 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
               height: 10,
             ),
             RichText(
-              text: TextSpan(
+              text: const TextSpan(
                 text: 'Already have an account? ',
                 style: TextStyle(
                   fontSize: 16,
@@ -449,7 +449,7 @@ class _SignUP_DoctorState extends State<SignUP_Doctor> {
                   color: Colors.black,
                   fontFamily: 'Montserrat',
                 ),
-                children: const <TextSpan>[
+                children: <TextSpan>[
                   TextSpan(
                       text: ' Sign in',
                       style: TextStyle(
@@ -487,7 +487,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       style: const TextStyle(color: Colors.black, fontSize: 16),
       underline: Container(
         height: 2,
-        color: Color.fromARGB(255, 228, 42, 76),
+        color: const Color.fromARGB(255, 228, 42, 76),
       ),
       onChanged: (String? newValue) {
         setState(() {

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'Login_Scr.dart';
 
 class connectScreen_1 extends StatelessWidget {
-  var primaryColor = Color(0xFFE42A4C);
-  var primaryColor2 = Color(0xFFEDEDED);
+  var primaryColor = const Color(0xFFE42A4C);
+  var primaryColor2 = const Color(0xFFEDEDED);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,7 +11,7 @@ class connectScreen_1 extends StatelessWidget {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: primaryColor.withOpacity(0.0),
-        title: Text('Connect your watch',
+        title: const Text('Connect your watch',
             style: TextStyle(
               color: Colors.black87,
             ),),
@@ -25,7 +25,7 @@ class connectScreen_1 extends StatelessWidget {
       ),
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Padding(
@@ -38,12 +38,12 @@ class connectScreen_1 extends StatelessWidget {
               ),
                   ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Column(
             children:  [
               Row(
                 mainAxisSize: MainAxisSize.min,
-                children: [
+                children: const [
                   Text(
                     " Wear ",
                     style: TextStyle(
@@ -62,7 +62,7 @@ class connectScreen_1 extends StatelessWidget {
                   ),
                 ],
               ),
-              Text(
+              const Text(
                 "on your wrist",
                 style: TextStyle(
                     fontSize: 26,
@@ -70,8 +70,8 @@ class connectScreen_1 extends StatelessWidget {
                     color: Colors.black,
                     fontFamily: 'Montserrat'),
               ),
-              SizedBox(height: 30),
-              Text(
+              const SizedBox(height: 30),
+              const Text(
                 "and press next",
                 textAlign: TextAlign.center,
                 style: TextStyle(

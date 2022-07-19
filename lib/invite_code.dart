@@ -5,8 +5,8 @@ import 'package:share/share.dart';
 
 
 class InvCode extends StatelessWidget {
-  var primaryColor = Color(0xFFE42A4C);
-  var primaryColor2 = Color(0xFFEDEDED);
+  var primaryColor = const Color(0xFFE42A4C);
+  var primaryColor2 = const Color(0xFFEDEDED);
   var invit_Code = Random().nextInt(8000)+1200;
 
 
@@ -18,7 +18,7 @@ class InvCode extends StatelessWidget {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: primaryColor.withOpacity(0.0),
-        title: Text(
+        title: const Text(
           'lnvite Code',
           style: TextStyle(
             color: Colors.black87,
@@ -44,10 +44,10 @@ class InvCode extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
-          Text(
+          const Text(
             "Ask your doctor to add this code\n"
             "to track your vital signs",
             textAlign: TextAlign.center,
@@ -57,10 +57,10 @@ class InvCode extends StatelessWidget {
                 // color: Colors.black,
                 fontFamily: 'Montserrat'),
           ),
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
-          Text(
+          const Text(
             "Your Doctor Code",
             textAlign: TextAlign.center,
             style: TextStyle(
@@ -69,19 +69,19 @@ class InvCode extends StatelessWidget {
                 // color: Colors.black,
                 fontFamily: 'Montserrat'),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Text(
             "VC$invit_Code",
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: const TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.w800,
                 // color: Colors.black,
                 fontFamily: 'Montserrat'),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           TextButton(
@@ -95,7 +95,7 @@ class InvCode extends StatelessWidget {
                     Icons.share,
                     color: primaryColor,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Text(

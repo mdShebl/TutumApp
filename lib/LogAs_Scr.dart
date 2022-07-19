@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class LogAS extends StatelessWidget {
-  var primaryColor = Color.fromARGB(255, 228, 42, 76);
-  var primaryColor2 = Color(0xFFFFDBDB);
-  var primaryColor3 = Color(0xFFEDE8E8);
+  var primaryColor = const Color.fromARGB(255, 228, 42, 76);
+  var primaryColor2 = const Color(0xFFFFDBDB);
+  var primaryColor3 = const Color(0xFFEDE8E8);
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
 
@@ -41,12 +41,12 @@ class LogAS extends StatelessWidget {
                     width: 110,
                     height: 110,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Text(
                         'Welcome To ',
                         style: TextStyle(
@@ -71,14 +71,14 @@ class LogAS extends StatelessWidget {
               // mid box
               child: Container(
                 width: double.infinity,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(30),
                         topRight: Radius.circular(30))),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     Text("Login as",
                     style: TextStyle(
                       fontSize: 25,
@@ -94,7 +94,7 @@ class LogAS extends StatelessWidget {
               // reports
               child: Container(
                 width: double.infinity,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.white,
                 ),
                 child: Padding(
@@ -131,7 +131,7 @@ class LogAS extends StatelessWidget {
                         children: [
                           Expanded(
                               child: Container(
-                                child: Text("Doctor",
+                                child: const Text("Doctor",
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.w300,
@@ -140,7 +140,7 @@ class LogAS extends StatelessWidget {
                                 alignment: Alignment.center,)),
                           Expanded(
                               child: Container(
-                                child: Text("Patient",
+                                child: const Text("Patient",
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.w300,
@@ -148,7 +148,7 @@ class LogAS extends StatelessWidget {
                                 alignment: Alignment.center,)),
                           Expanded(
                               child: Container(
-                                child: Text("Monitor",
+                                child: const Text("Monitor",
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.w300,
@@ -166,7 +166,7 @@ class LogAS extends StatelessWidget {
               // reports
               child: Container(
                 width: double.infinity,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.white,
                 ),
                 child: Row(

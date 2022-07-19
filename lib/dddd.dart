@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:scroll_snap_list/scroll_snap_list.dart';
-import 'package:tutumapp/SvgIcons.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -49,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         children: [
-          Icon(Icons.keyboard_arrow_down_rounded),
+          const Icon(Icons.keyboard_arrow_down_rounded),
           Stack(
             children: [
               buildImage(),

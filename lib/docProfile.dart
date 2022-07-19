@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 
 class Doc_profile extends StatelessWidget {
   Doc_profile({Key? key}) : super(key: key);
-  var primaryColor = Color(0xFFE42A4C);
-  var primaryColor2 = Color(0xFFEDEDED);
-  var primaryColor3 = Color(0xFFE24E59);
-  var primaryColor4 = Color(0xFFD2EFFA);
+  var primaryColor = const Color(0xFFE42A4C);
+  var primaryColor2 = const Color(0xFFEDEDED);
+  var primaryColor3 = const Color(0xFFE24E59);
+  var primaryColor4 = const Color(0xFFD2EFFA);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: primaryColor.withOpacity(0.0),
-        title: Text(
+        title: const Text(
           'Profile',
           style: TextStyle(
             color: Colors.black87,
@@ -32,7 +32,7 @@ class Doc_profile extends StatelessWidget {
             child: Container(
               height: 120,
               width: double.infinity,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   //color: Colors.red,
                   ),
               child: Column(
@@ -53,14 +53,14 @@ class Doc_profile extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Text(
+                  const Text(
                     "Dr. Amged",
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  Text(
+                  const Text(
                     "Heart Specialist",
                     style: TextStyle(
                       fontSize: 14,
@@ -68,7 +68,7 @@ class Doc_profile extends StatelessWidget {
                       fontWeight: FontWeight.w400,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   Row(
@@ -86,7 +86,7 @@ class Doc_profile extends StatelessWidget {
                           child: MaterialButton(
                             onPressed: () {},
                             child: Row(
-                              children: [
+                              children: const [
                                 Icon(
                                   Icons.call,
                                   color: Colors.white,
@@ -116,7 +116,7 @@ class Doc_profile extends StatelessWidget {
                               child: MaterialButton(
                                 onPressed: () {},
                                 child: Row(
-                                  children: [
+                                  children: const [
                                     Icon(
                                       Icons.chat_bubble,
                                       color: Colors.white,
@@ -157,7 +157,7 @@ class Doc_profile extends StatelessWidget {
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(
                   hintText: 'About Doctor',
-                  hintStyle: TextStyle(fontSize: 16),
+                  hintStyle: const TextStyle(fontSize: 16),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                     borderSide: const BorderSide(
@@ -167,7 +167,7 @@ class Doc_profile extends StatelessWidget {
                     ),
                   ),
                  // filled: true,
-                  contentPadding: EdgeInsets.all(16),
+                  contentPadding: const EdgeInsets.all(16),
                   isDense: true,
                 ),
               ),
@@ -176,7 +176,7 @@ class Doc_profile extends StatelessWidget {
           Container(
             height: 150,
             width: double.infinity,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               //color: primaryColor.withOpacity(0.1),
             ),
             child: Row(
@@ -206,10 +206,10 @@ class Doc_profile extends StatelessWidget {
                               height: 55,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 5,
                           ),
-                          Text("Clinic Visit",
+                          const Text("Clinic Visit",
                           style: TextStyle(
                             color: Colors.black87,
                             fontWeight: FontWeight.w500,
@@ -242,10 +242,10 @@ class Doc_profile extends StatelessWidget {
                               height: 55,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 5,
                           ),
-                          Text("Home Visit",
+                          const Text("Home Visit",
                             style: TextStyle(
                              color: Colors.black87,
                               fontWeight: FontWeight.w500,
@@ -278,10 +278,10 @@ class Doc_profile extends StatelessWidget {
                               height: 55,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 5,
                           ),
-                          Text("Clinic Location",
+                          const Text("Clinic Location",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 14,
@@ -300,7 +300,7 @@ class Doc_profile extends StatelessWidget {
           Container(
             height: 150,
             width: double.infinity,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
              // color: Colors.deepOrangeAccent,
             ),
             child:  Padding(
@@ -317,7 +317,7 @@ class Doc_profile extends StatelessWidget {
                   color: primaryColor,
                   onPressed: () {
                   },
-                  child: Text(
+                  child: const Text(
                     'Back',
                     style: TextStyle(
                       fontWeight: FontWeight.w600,

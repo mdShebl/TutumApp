@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:scroll_snap_list/scroll_snap_list.dart';
-import 'package:tutumapp/dddd.dart';
 import 'SvgIcons.dart';
 
 class SnappingPage extends StatefulWidget {
@@ -15,7 +14,7 @@ class _SnappingPageState extends State<SnappingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold( body:
-      Container(
+      SizedBox(
         width: double.infinity,
         child: ScrollSnapList(
           itemBuilder:  (context,index) => pillIcon(index,'bb'),

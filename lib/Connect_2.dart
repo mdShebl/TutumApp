@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'Login_Scr.dart';
 
 class connectScreen_2 extends StatelessWidget {
-  var primaryColor = Color(0xFFE42A4C);
-  var primaryColor2 = Color(0xFFEDEDED);
+  var primaryColor = const Color(0xFFE42A4C);
+  var primaryColor2 = const Color(0xFFEDEDED);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,7 +11,7 @@ class connectScreen_2 extends StatelessWidget {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: primaryColor.withOpacity(0.0),
-        title: Text('Connect your watch',
+        title: const Text('Connect your watch',
             style: TextStyle(
               color: Colors.black87,
             ),),
@@ -36,13 +36,13 @@ class connectScreen_2 extends StatelessWidget {
                   color: Colors.white,
 
                 ),
-                  child: Text('ggg'),
+                  child: const Text('ggg'),
                     ),
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Column(
-            children:  [
+            children:  const [
 
               Text(
                 "Connect ",

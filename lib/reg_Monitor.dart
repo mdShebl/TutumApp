@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 class SignUP_Monitor extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var primaryColor = Color.fromARGB(255, 228, 42, 76);
-    var primaryColor2 = Color(0xFFEDEDED);
-    var primaryColor3 = Color(0xFFf5f5f5);
+    var primaryColor = const Color.fromARGB(255, 228, 42, 76);
+    var primaryColor2 = const Color(0xFFEDEDED);
+    var primaryColor3 = const Color(0xFFf5f5f5);
     var nameController = TextEditingController();
     var ageController = TextEditingController();
     var numController = TextEditingController();
@@ -24,7 +24,7 @@ class SignUP_Monitor extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(top: 20.0),
             child: RichText(
-              text: TextSpan(
+              text: const TextSpan(
                 text: 'Sign up - ',
                 style: TextStyle(
                   fontSize: 20,
@@ -32,7 +32,7 @@ class SignUP_Monitor extends StatelessWidget {
                   color: Colors.black,
                   fontFamily: 'Montserrat',
                 ),
-                children: const <TextSpan>[
+                children: <TextSpan>[
                   TextSpan(
                       text: ' Monitor',
                       style: TextStyle(
@@ -47,7 +47,7 @@ class SignUP_Monitor extends StatelessWidget {
           ),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
@@ -59,7 +59,7 @@ class SignUP_Monitor extends StatelessWidget {
               padding: const EdgeInsetsDirectional.only(start: 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: [
+                children: const [
                   Icon(
                     Icons.person,
                     color: Colors.black54,
@@ -88,7 +88,7 @@ class SignUP_Monitor extends StatelessWidget {
                   keyboardType: TextInputType.name,
                   decoration: InputDecoration(
                     hintText: 'Tap,  & Enter name',
-                    hintStyle: TextStyle(fontSize: 16),
+                    hintStyle: const TextStyle(fontSize: 16),
                      border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                       borderSide: const BorderSide(
@@ -98,7 +98,7 @@ class SignUP_Monitor extends StatelessWidget {
                       ),
                     ),
                     filled: true,
-                    contentPadding: EdgeInsets.all(16),
+                    contentPadding: const EdgeInsets.all(16),
                   ),
                 ),
               ),
@@ -106,7 +106,7 @@ class SignUP_Monitor extends StatelessWidget {
             Padding(
               padding: const EdgeInsetsDirectional.only(start: 15),
               child: Row(
-                children: [
+                children: const [
                   Icon(Icons.date_range_rounded,
                     color: Colors.black54,
                     size: 25,
@@ -152,7 +152,7 @@ class SignUP_Monitor extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: [
-                  Container(
+                  SizedBox(
                     width: 95,
                     height: 47,
                     //color: primaryColor2,
@@ -163,7 +163,7 @@ class SignUP_Monitor extends StatelessWidget {
                       keyboardType: TextInputType.text,
                       decoration: InputDecoration(
                         hintText: '41',
-                        hintStyle: TextStyle(fontSize: 16),
+                        hintStyle: const TextStyle(fontSize: 16),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                           borderSide: const BorderSide(
@@ -176,21 +176,21 @@ class SignUP_Monitor extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.all(0),
-                      child: Container(
+                      child: SizedBox(
                         height: 50,
                         child: ChoiceChip(
-                          labelPadding: EdgeInsets.all(6),
-                          labelStyle: TextStyle(color: Colors.white),
-                          avatar: Icon(Icons.male,size: 32,color: Colors.white,),
+                          labelPadding: const EdgeInsets.all(6),
+                          labelStyle: const TextStyle(color: Colors.white),
+                          avatar: const Icon(Icons.male,size: 32,color: Colors.white,),
                           backgroundColor: Colors.white,
                           selectedColor: primaryColor,
-                          label: Text("Male     "),
+                          label: const Text("Male     "),
                           selected: true,
-                          shadowColor: Color.fromARGB(255, 228, 42, 76),
+                          shadowColor: const Color.fromARGB(255, 228, 42, 76),
                           shape: RoundedRectangleBorder(
                               side: const BorderSide(
                                   color: Color.fromARGB(255, 228, 42, 76),
@@ -213,17 +213,17 @@ class SignUP_Monitor extends StatelessWidget {
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.all(0),
-                      child: Container(
+                      child: SizedBox(
                         height: 50,
                         child: ChoiceChip(
-                          labelPadding: EdgeInsets.all(6),
-                          labelStyle: TextStyle(color: Colors.black45),
-                          avatar: Icon(Icons.female,size: 32,color: Colors.black45,),
+                          labelPadding: const EdgeInsets.all(6),
+                          labelStyle: const TextStyle(color: Colors.black45),
+                          avatar: const Icon(Icons.female,size: 32,color: Colors.black45,),
                           // backgroundColor: Colors.black12,
                           selectedColor: primaryColor,
-                          label: Text("Female  "),
+                          label: const Text("Female  "),
                           selected: false,
-                          shadowColor: Color.fromARGB(255, 228, 42, 76),
+                          shadowColor: const Color.fromARGB(255, 228, 42, 76),
                           shape: RoundedRectangleBorder(
                               side: const BorderSide(
                                   color: Color.fromARGB(255, 228, 42, 76),
@@ -243,7 +243,7 @@ class SignUP_Monitor extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 15,),
+            const SizedBox(height: 15,),
             Padding(
               padding: const EdgeInsetsDirectional.only(start: 15),
               child: Row(
@@ -275,7 +275,7 @@ class SignUP_Monitor extends StatelessWidget {
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   hintText: 'eg. 01023837647',
-                  hintStyle: TextStyle(fontSize: 16),
+                  hintStyle: const TextStyle(fontSize: 16),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                     borderSide: const BorderSide(
@@ -285,12 +285,12 @@ class SignUP_Monitor extends StatelessWidget {
                     ),
                   ),
                   filled: true,
-                  contentPadding: EdgeInsets.all(16),
+                  contentPadding: const EdgeInsets.all(16),
                   isDense: true,
                 ),
               ),
             ),
-            SizedBox(height: 15,),
+            const SizedBox(height: 15,),
             Padding(
               padding: const EdgeInsetsDirectional.only(start: 15),
               child: Row(
@@ -303,7 +303,7 @@ class SignUP_Monitor extends StatelessWidget {
                        height: 20,
                     ),
 
-                  Text(
+                  const Text(
                     ' Blood type ',
                     style: TextStyle(
                       fontSize: 19,
@@ -315,11 +315,11 @@ class SignUP_Monitor extends StatelessWidget {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
               child: MyStatefulWidget2(),
             ),
-            SizedBox(height: 15,),
+            const SizedBox(height: 15,),
             Padding(
               padding: const EdgeInsetsDirectional.only(start: 15),
               child: Row(
@@ -351,7 +351,7 @@ class SignUP_Monitor extends StatelessWidget {
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   hintText: 'Tap, Enter relationship',
-                  hintStyle: TextStyle(fontSize: 16),
+                  hintStyle: const TextStyle(fontSize: 16),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                     borderSide: const BorderSide(
@@ -361,7 +361,7 @@ class SignUP_Monitor extends StatelessWidget {
                     ),
                   ),
                   filled: true,
-                  contentPadding: EdgeInsets.all(16),
+                  contentPadding: const EdgeInsets.all(16),
                   isDense: true,
                 ),
               ),
@@ -402,7 +402,7 @@ class SignUP_Monitor extends StatelessWidget {
               height: 10,
             ),
             RichText(
-              text: TextSpan(
+              text: const TextSpan(
                 text: 'Already have an account? ',
                 style: TextStyle(
                   fontSize: 16,
@@ -410,7 +410,7 @@ class SignUP_Monitor extends StatelessWidget {
                   color: Colors.black,
                   fontFamily: 'Montserrat',
                 ),
-                children: const <TextSpan>[
+                children: <TextSpan>[
                   TextSpan(
                       text: ' Sign in',
                       style: TextStyle(
@@ -445,7 +445,7 @@ class _MyStatefulWidget2State2 extends State<MyStatefulWidget2> {
       alignment: Alignment.center,
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Color(0xFFf5f5f5) ,
+        color: const Color(0xFFf5f5f5) ,
         borderRadius: BorderRadius.circular(10),
 
       ),
@@ -459,7 +459,7 @@ class _MyStatefulWidget2State2 extends State<MyStatefulWidget2> {
             Container(
               height: 0,
               width: double.infinity,
-              color: Color.fromARGB(255, 228, 42, 76),
+              color: const Color.fromARGB(255, 228, 42, 76),
             ),
           ],
         ),
