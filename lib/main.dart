@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tutumapp/reg_doctor.dart';
+import 'package:tutumapp/reg_patient.dart';
+import 'package:tutumapp/reg_patient2.dart';
+
+import 'PatHome.dart';
 
 
 
@@ -13,7 +17,7 @@ class MyApp extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-            home: SignUP_Doctor(),
+            home: PatHome(),
             //WelcomeScreen(),
       //
       //theme: ThemeData(fontFamily: 'Monteserrat'),
